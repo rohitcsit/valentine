@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌹 Rose Day - गुलाब दिवस ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --pink-dark: #c2185b;
+            --pink-medium: #e91e63;
+            --pink-light: #f48fb1;
+            --pink-lighter: #fce4ec;
+            --rose-red: #ff1744;
+            --gold: #ffd700;
+            --white: #ffffff;
+            --shadow: rgba(233, 30, 99, 0.4);
+            --shadow-dark: rgba(194, 24, 91, 0.5);
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f3e5f5 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Hero Section - Mobile First */
+        .hero {
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?q=80&w=2400');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 2rem 1rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, rgba(194, 24, 91, 0.5), rgba(139, 0, 0, 0.75));
+            backdrop-filter: blur(1px);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            animation: heroFadeIn 1.5s ease;
+            max-width: 90%;
+        }
+
+        .hero-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 12vw, 7rem);
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
+            font-weight: 900;
+            animation: titleGlow 3s ease infinite;
+        }
+
+        @keyframes titleGlow {
+            0%, 100% {
+                text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 23, 68, 0.5);
+            }
+            50% {
+                text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8), 0 0 70px rgba(255, 23, 68, 0.8);
+            }
+        }
+
+        .hero-content .hindi-title {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(1.8rem, 8vw, 4rem);
+            font-weight: 700;
+            margin-top: 1rem;
+            text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero-content .date {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-weight: 600;
+            margin-top: 1.2rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Floating Menu - Mobile First */
+        .floating-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .menu-toggle {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 30px var(--shadow-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-size: 1.8rem;
+        }
+
+        .menu-toggle:hover {
+            transform: scale(1.1) rotate(180deg);
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        .menu-items {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 15px 40px var(--shadow-dark);
+            padding: 1rem;
+            min-width: 200px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-20px) scale(0.95);
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+
+        .menu-items.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0) scale(1);
+        }
+
+        .menu-item {
+            padding: 0.9rem 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--pink-dark);
+            display: block;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            text-align: center;
+            border: 2px solid transparent;
+        }
+
+        .menu-item:hover {
+            background: linear-gradient(135deg, var(--pink-medium), var(--rose-red));
+            color: white;
+            transform: translateX(-5px);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+
+        /* Content Sections - Mobile First */
+        .content-section {
+            padding: 3rem 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 8vw, 4rem);
+            text-align: center;
+            color: var(--pink-dark);
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--rose-red), transparent);
+            border-radius: 3px;
+        }
+
+        /* Surprise Button & Notes - Mobile First */
+        .surprise-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .surprise-button {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(252, 228, 236, 0.35));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 12px 40px var(--shadow-dark);
+            padding: 1.5rem 3rem;
+            border-radius: 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--pink-dark);
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            position: relative;
+            overflow: hidden;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .surprise-button::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 23, 68, 0.3), transparent);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s ease, height 0.6s ease;
+        }
+
+        .surprise-button:active::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .surprise-button:active {
+            transform: scale(0.98);
+            box-shadow: 0 15px 50px var(--shadow-dark);
+            background: linear-gradient(135deg, var(--pink-light), var(--pink-lighter));
+        }
+
+        .surprise-notes {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.8s ease;
+        }
+
+        .surprise-notes.show {
+            opacity: 1;
+            max-height: 3000px;
+        }
+
+        .surprise-note {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(252, 228, 236, 0.4));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 12px 35px var(--shadow);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            color: var(--pink-dark);
+            font-weight: 600;
+            animation: noteSlideUp 0.6s ease;
+            animation-fill-mode: both;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .surprise-note::before {
+            content: '💝';
+            position: absolute;
+            top: -25px;
+            right: -25px;
+            font-size: 7rem;
+            opacity: 0.1;
+        }
+
+        .surprise-note:nth-child(1) { animation-delay: 0.1s; }
+        .surprise-note:nth-child(2) { animation-delay: 0.2s; }
+        .surprise-note:nth-child(3) { animation-delay: 0.3s; }
+
+        @keyframes noteSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Shayari Section - Mobile First */
+        .shayari-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .shayari-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+        }
+
+        .shayari-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(252, 228, 236, 0.35));
+            backdrop-filter: blur(20px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 12px 40px var(--shadow);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .shayari-card.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .shayari-card::before {
+            content: '"';
+            position: absolute;
+            top: -25px;
+            left: 12px;
+            font-size: 8rem;
+            color: rgba(255, 23, 68, 0.1);
+            font-family: 'Playfair Display', serif;
+            font-weight: 900;
+        }
+
+        .shayari-card:active {
+            transform: scale(0.98);
+            box-shadow: 0 20px 60px var(--shadow-dark);
+            border-color: var(--rose-red);
+        }
+
+        .shayari-text {
+            font-size: 1.2rem;
+            line-height: 1.9;
+            color: var(--pink-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            white-space: pre-line;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Sweet Lines - Enhanced Tear Pages - Mobile First */
+        .sweetlines-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tear-pages {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+        }
+
+        .tear-page {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 192, 203, 0.6);
+            box-shadow: 0 12px 35px var(--shadow), 0 5px 12px rgba(0, 0, 0, 0.1);
+            padding: 2.5rem 1.8rem 2rem;
+            border-radius: 18px;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            transform: translateY(50px);
+        }
+
+        .tear-page.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tear-page::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 18px;
+            background-image: 
+                repeating-linear-gradient(
+                    to right,
+                    transparent 0px,
+                    transparent 8px,
+                    var(--pink-light) 8px,
+                    var(--pink-light) 12px,
+                    transparent 12px,
+                    transparent 20px
+                );
+        }
+
+        .tear-page::after {
+            content: '📝';
+            position: absolute;
+            top: 22px;
+            right: 20px;
+            font-size: 2.2rem;
+            opacity: 0.3;
+        }
+
+        .tear-page:active {
+            transform: scale(0.98);
+            box-shadow: 0 25px 70px var(--shadow-dark), 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .tear-page-text {
+            font-size: 1.15rem;
+            color: var(--pink-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.7;
+            margin-top: 0.8rem;
+        }
+
+        /* Rose Gallery - Mobile First */
+        .rose-gallery {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .rose-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .rose-card {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 0;
+            transform: scale(0.95);
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+
+        .rose-card.animate {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .rose-card:active {
+            transform: scale(1.02);
+            box-shadow: 0 20px 60px var(--shadow-dark);
+            z-index: 10;
+        }
+
+        .rose-image {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            transition: all 0.6s ease;
+        }
+
+        .rose-card:active .rose-image {
+            transform: scale(1.15);
+        }
+
+        .rose-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(139, 0, 0, 0.95), rgba(139, 0, 0, 0.5), transparent);
+            padding: 2rem 1.5rem;
+            transform: translateY(0);
+            transition: all 0.5s ease;
+        }
+
+        .rose-title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            color: white;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+        }
+
+        .rose-quote {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-style: italic;
+        }
+
+        /* Rose Petals Animation */
+        .petals {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .petal {
+            position: absolute;
+            top: -80px;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, var(--rose-red), var(--pink-dark));
+            border-radius: 50% 0 50% 0;
+            opacity: 0.7;
+            animation: petalFall linear infinite;
+        }
+
+        @keyframes petalFall {
+            to {
+                top: 120%;
+                transform: translateX(100px) rotate(720deg);
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2.2rem;
+            animation: scrollBounce 2s infinite;
+            z-index: 10;
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
+        }
+
+        @keyframes scrollBounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateX(-50%) translateY(0);
+            }
+            40% {
+                transform: translateX(-50%) translateY(-20px);
+            }
+            60% {
+                transform: translateX(-50%) translateY(-12px);
+            }
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(60px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Tablet Responsive */
+        @media (min-width: 600px) {
+            .surprise-notes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .shayari-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tear-pages {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .rose-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .surprise-button {
+                width: auto;
+            }
+        }
+
+        /* Desktop Responsive */
+        @media (min-width: 1024px) {
+            .hero {
+                background-attachment: fixed;
+            }
+
+            .content-section {
+                padding: 5rem 2rem;
+            }
+
+            .surprise-notes {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem;
+            }
+
+            .shayari-grid {
+                gap: 2.5rem;
+            }
+
+            .tear-pages {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2.5rem;
+            }
+
+            .rose-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .shayari-card:hover {
+                transform: translateY(-12px) rotate(1deg);
+                box-shadow: 0 20px 60px var(--shadow-dark);
+                border-color: var(--rose-red);
+            }
+
+            .tear-page:hover {
+                transform: translateY(-15px) scale(1.02);
+                box-shadow: 0 25px 70px var(--shadow-dark), 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+
+            .rose-card:hover {
+                transform: scale(1.05) rotate(-1deg);
+                box-shadow: 0 20px 60px var(--shadow-dark);
+            }
+
+            .rose-image {
+                height: 320px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Rose Petals -->
+    <div class="petals" id="petals"></div>
+
+    <!-- Floating Menu -->
+    <div class="floating-menu">
+        <div class="menu-toggle" onclick="toggleMenu()">💕</div>
+        <div class="menu-items" id="menuItems">
+            <a href="index.html" class="menu-item">🏠 Home</a>
+            <a href="a.html" class="menu-item">🌹 Rose Day</a>
+            <a href="b.html" class="menu-item">💍 Propose Day</a>
+            <a href="c.html" class="menu-item">🍫 Chocolate Day</a>
+            <a href="d.html" class="menu-item">🧸 Teddy Day</a>
+            <a href="e.html" class="menu-item">🤝 Promise Day</a>
+            <a href="f.html" class="menu-item">🤗 Hug Day</a>
+            <a href="g.html" class="menu-item">💋 Kiss Day</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>🌹 Rose Day 🌹</h1>
+            <div class="hindi-title">गुलाब दिवस</div>
+            <p class="date">7 February - प्यार का इज़हार</p>
+        </div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Surprise Notes Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, rgba(252, 228, 236, 0.8), rgba(248, 187, 208, 0.8));">
+        <div class="surprise-container">
+            <h2 class="section-title">✨ सरप्राइज नोट्स ✨</h2>
+            <button class="surprise-button" onclick="toggleSurprise()">
+                🎁 सरप्राइज खोलो 🎁
+            </button>
+            <div class="surprise-notes" id="surpriseNotes"></div>
+        </div>
+    </section>
+
+    <!-- Shayari Section -->
+    <section class="content-section" style="background: linear-gradient(to bottom, rgba(248, 187, 208, 0.6), rgba(243, 229, 245, 0.6));">
+        <div class="shayari-container">
+            <h2 class="section-title">💖 रोमांटिक शायरी 💖</h2>
+            <div class="shayari-grid" id="shayariGrid"></div>
+        </div>
+    </section>
+
+    <!-- Sweet Lines Section -->
+    <section class="content-section" style="background: linear-gradient(135deg, rgba(243, 229, 245, 0.7), rgba(252, 228, 236, 0.7));">
+        <div class="sweetlines-container">
+            <h2 class="section-title">💕 मीठी बातें 💕</h2>
+            <div class="tear-pages" id="tearPages"></div>
+        </div>
+    </section>
+
+    <!-- Rose Gallery Section -->
+    <section class="content-section" style="background: linear-gradient(to bottom, rgba(252, 228, 236, 0.8), rgba(248, 187, 208, 0.8));">
+        <div class="rose-gallery">
+            <h2 class="section-title">🌹 गुलाब की यादें 🌹</h2>
+            <div class="rose-grid" id="roseGrid"></div>
+        </div>
+    </section>
+
+    <script>
+        const jsonData = {
+            "roseDay": {
+                "title": "Rose Day",
+                "date": "7 February",
+                "hindiTitle": "गुलाब दिवस",
+                "shayari": [
+                    "गुलाब की खुशबू में बसा है तेरा प्यार,\nहर पंखुड़ी में लिखा है तुझसे इकरार।",
+                    "लाल गुलाब सा है तेरा प्यार मेरे लिए,\nतू ही मेरी ज़िन्दगी का इकलौता सहारा है।",
+                    "इस गुलाब की तरह मुस्कुराओ हमेशा,\nतुम्हारी हंसी में ही मेरी खुशियाँ बसती हैं।",
+                    "तेरी मोहब्बत गुलाब सी खिलती है,\nमेरे दिल के बगीचे में रंग भरती है।",
+                    "गुलाब की तरह नाज़ुक है प्यार हमारा,\nसंभाल के रखना है ये रिश्ता हमारा।"
+                ],
+                "sweetLines": [
+                    "तुम मेरे दिल के सबसे खूबसूरत गुलाब हो 🌹",
+                    "तेरी मुस्कान से खिलता है मेरा दिल 💕",
+                    "हर दिन तुम्हें गुलाब देना चाहता हूँ 🌹",
+                    "तुम्हारे बिना ज़िन्दगी बेरंग है 💖",
+                    "तुम्हारी खुशबू गुलाब से भी प्यारी है 🌹",
+                    "मेरे दिल का बगीचा तुमसे खिलता है 💝"
+                ],
+                "surpriseNotes": [
+                    "तुम्हें पाकर मैं दुनिया का सबसे खुशनसीब इंसान हूँ! हर दिन तुम्हारे साथ एक नया गुलाब की तरह खिलता है! 🌹❤️",
+                    "तुम्हारी हर अदा पर मैं फ़िदा हूँ! तुम्हारी आँखों में झाँकना मुझे जन्नत का एहसास देता है! 💕✨",
+                    "तुम हो तो सब कुछ है, तुम नहीं तो कुछ नहीं! तुम मेरी ज़िन्दगी की सबसे खूबसूरत गुलाब हो! 🌹💖"
+                ],
+                "roses": [
+                    {
+                        "title": "Red Rose",
+                        "image": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=800",
+                        "quote": "लाल गुलाब - सच्चे प्यार का प्रतीक"
+                    },
+                    {
+                        "title": "Pink Rose",
+                        "image": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=800",
+                        "quote": "गुलाबी गुलाब - कोमल भावनाओं का संदेश"
+                    },
+                    {
+                        "title": "White Rose",
+                        "image": "https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?q=80&w=800",
+                        "quote": "सफ़ेद गुलाब - पवित्र प्रेम की निशानी"
+                    },
+                    {
+                        "title": "Yellow Rose",
+                        "image": "https://images.unsplash.com/photo-1561238881-03f8e11bfb0f?q=80&w=800",
+                        "quote": "पीला गुलाब - दोस्ती और खुशियों का प्रतीक"
+                    },
+                    {
+                        "title": "Orange Rose",
+                        "image": "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=800",
+                        "quote": "नारंगी गुलाब - जोश और उत्साह की निशानी"
+                    },
+                    {
+                        "title": "Rose Bouquet",
+                        "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=800",
+                        "quote": "गुलदस्ता - प्यार का सबसे खूबसूरत तोहफा"
+                    }
+                ]
+            }
+        };
+
+        const data = jsonData.roseDay;
+
+        // Create surprise notes
+        function createSurpriseNotes() {
+            const container = document.getElementById('surpriseNotes');
+            data.surpriseNotes.forEach(note => {
+                const div = document.createElement('div');
+                div.className = 'surprise-note';
+                div.textContent = note;
+                container.appendChild(div);
+            });
+        }
+
+        // Toggle surprise
+        function toggleSurprise() {
+            document.getElementById('surpriseNotes').classList.toggle('show');
+        }
+
+        // Create shayari
+        function createShayari() {
+            const grid = document.getElementById('shayariGrid');
+            data.shayari.forEach((shayari, index) => {
+                const card = document.createElement('div');
+                card.className = 'shayari-card';
+                card.style.transitionDelay = `${index * 0.12}s`;
+                card.innerHTML = `<div class="shayari-text">${shayari}</div>`;
+                grid.appendChild(card);
+            });
+        }
+
+        // Create sweet lines
+        function createSweetLines() {
+            const container = document.getElementById('tearPages');
+            data.sweetLines.forEach((line, index) => {
+                const page = document.createElement('div');
+                page.className = 'tear-page';
+                page.style.transitionDelay = `${index * 0.1}s`;
+                page.innerHTML = `<div class="tear-page-text">${line}</div>`;
+                container.appendChild(page);
+            });
+        }
+
+        // Create rose gallery
+        function createRoseGallery() {
+            const grid = document.getElementById('roseGrid');
+            data.roses.forEach((rose, index) => {
+                const card = document.createElement('div');
+                card.className = 'rose-card';
+                card.style.transitionDelay = `${index * 0.08}s`;
+                card.innerHTML = `
+                    <img src="${rose.image}" alt="${rose.title}" class="rose-image">
+                    <div class="rose-overlay">
+                        <div class="rose-title">${rose.title}</div>
+                        <div class="rose-quote">${rose.quote}</div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // Intersection Observer
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, { threshold: 0.15, rootMargin: '-20px' });
+
+        setTimeout(() => {
+            document.querySelectorAll('.shayari-card, .tear-page, .rose-card').forEach(el => {
+                observer.observe(el);
+            });
+        }, 100);
+
+        // Toggle menu
+        function toggleMenu() {
+            document.getElementById('menuItems').classList.toggle('active');
+        }
+
+        document.addEventListener('click', (e) => {
+            const menu = document.querySelector('.floating-menu');
+            if (!menu.contains(e.target)) {
+                document.getElementById('menuItems').classList.remove('active');
+            }
+        });
+
+        // Create falling petals
+        function createPetals() {
+            const container = document.getElementById('petals');
+            setInterval(() => {
+                const petal = document.createElement('div');
+                petal.className = 'petal';
+                petal.style.left = Math.random() * 100 + '%';
+                petal.style.animationDuration = (Math.random() * 4 + 7) + 's';
+                petal.style.opacity = Math.random() * 0.4 + 0.5;
+                container.appendChild(petal);
+                setTimeout(() => petal.remove(), 11000);
+            }, 700);
+        }
+
+        // Initialize
+        window.addEventListener('load', () => {
+            createSurpriseNotes();
+            createShayari();
+            createSweetLines();
+            createRoseGallery();
+            createPetals();
+        });
+    </script>
+</body>
+</html>
