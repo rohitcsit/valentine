@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🌹 Rose Day - गुलाब दिवस ❤️</title>
+    <title>🌹 Happy Rose Day - Rohit ❤️ Daulat</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -20,6 +20,8 @@
             --pink-light: #f48fb1;
             --pink-lighter: #fce4ec;
             --rose-red: #ff1744;
+            --deep-red: #b71c1c;
+            --crimson: #dc143c;
             --gold: #ffd700;
             --white: #ffffff;
             --shadow: rgba(233, 30, 99, 0.4);
@@ -31,18 +33,38 @@
             background: linear-gradient(135deg, #fce4ec 0%, #f8bbd0 50%, #f3e5f5 100%);
             color: #333;
             overflow-x: hidden;
+            perspective: 1000px;
         }
 
         html {
             scroll-behavior: smooth;
         }
 
-        /* Hero Section - Mobile First */
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--rose-red), var(--pink-dark));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--crimson), var(--deep-red));
+        }
+
+        /* Hero Section */
         .hero {
             min-height: 100vh;
-            background-image: url('https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?q=80&w=2400');
+            background-image: url('https://images.unsplash.com/photo-1494972308805-463bc619d34e?q=80&w=2400');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             position: relative;
             display: flex;
             align-items: center;
@@ -58,8 +80,48 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at center, rgba(194, 24, 91, 0.5), rgba(139, 0, 0, 0.75));
-            backdrop-filter: blur(1px);
+            background: linear-gradient(135deg, rgba(183, 28, 28, 0.6) 0%, rgba(194, 24, 91, 0.5) 50%, rgba(136, 14, 79, 0.6) 100%);
+            backdrop-filter: blur(2px);
+        }
+
+        /* Animated Background Elements */
+        .hero-bg-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.2), transparent);
+            animation: floatCircle 25s infinite ease-in-out;
+            filter: blur(3px);
+        }
+
+        @keyframes floatCircle {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(60px, -60px) scale(1.15) rotate(90deg); }
+            50% { transform: translate(-40px, 40px) scale(0.9) rotate(180deg); }
+            75% { transform: translate(50px, 50px) scale(1.1) rotate(270deg); }
+        }
+
+        /* Sparkle Stars */
+        .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: white;
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+            box-shadow: 0 0 10px white, 0 0 20px white, 0 0 30px rgba(255, 182, 193, 0.8);
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
         }
 
         .hero-content {
@@ -68,106 +130,229 @@
             text-align: center;
             color: white;
             animation: heroFadeIn 1.5s ease;
-            max-width: 90%;
+            max-width: 95%;
+            transform-style: preserve-3d;
+        }
+
+        /* Couple Names */
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 10vw, 6rem);
+            margin-bottom: 1rem;
+            animation: coupleGlow 3s ease-in-out infinite;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8), 3px 3px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .couple-names .name-rohit {
+            color: #fff;
+            display: inline-block;
+            animation: floatName 4s ease-in-out infinite;
+        }
+
+        .couple-names .loves {
+            color: var(--rose-red);
+            display: inline-block;
+            font-size: clamp(2rem, 8vw, 4.5rem);
+            margin: 0 0.5rem;
+            animation: heartPulse 1.5s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 23, 68, 0.8);
+        }
+
+        .couple-names .name-daulat {
+            color: var(--gold);
+            display: inline-block;
+            animation: floatName 4s ease-in-out infinite reverse;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.9), 0 0 50px rgba(255, 215, 0, 0.5);
+        }
+
+        @keyframes floatName {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes coupleGlow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(255, 215, 0, 0.5)); }
+            50% { filter: drop-shadow(0 0 40px rgba(255, 215, 0, 0.8)); }
         }
 
         .hero-content h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 12vw, 7rem);
-            margin-bottom: 1rem;
-            text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8);
-            font-weight: 900;
-            animation: titleGlow 3s ease infinite;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 12vw, 8rem);
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+            animation: titleGlow 3s ease infinite, float3D 6s ease-in-out infinite;
+            transform: translateZ(50px);
+            background: linear-gradient(135deg, #fff, #ffcdd2, #fff, #f8bbd0, #fff);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: titleGlow 3s ease infinite, gradientShift 5s ease infinite;
+            filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 30px rgba(255, 107, 107, 0.6));
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes float3D {
+            0%, 100% { transform: translateZ(50px) rotateX(0deg) translateY(0); }
+            50% { transform: translateZ(80px) rotateX(3deg) translateY(-15px); }
         }
 
         @keyframes titleGlow {
             0%, 100% {
-                text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8), 0 0 40px rgba(255, 23, 68, 0.5);
+                filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 30px rgba(255, 107, 107, 0.6));
             }
             50% {
-                text-shadow: 3px 3px 20px rgba(0, 0, 0, 0.8), 0 0 70px rgba(255, 23, 68, 0.8);
+                filter: drop-shadow(4px 4px 8px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 50px rgba(255, 23, 68, 0.9));
             }
         }
 
-        .hero-content .hindi-title {
+        .hero-content .hindi-subtitle {
             font-family: 'Noto Sans Devanagari', sans-serif;
-            font-size: clamp(1.8rem, 8vw, 4rem);
-            font-weight: 700;
+            font-size: clamp(1.2rem, 5vw, 2.5rem);
+            font-weight: 500;
             margin-top: 1rem;
             text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.7);
+            color: #ffcdd2;
+            letter-spacing: 2px;
+            animation: subtitlePulse 3s ease-in-out infinite;
+        }
+
+        @keyframes subtitlePulse {
+            0%, 100% { opacity: 0.9; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.02); }
         }
 
         .hero-content .date {
             font-family: 'Dancing Script', cursive;
-            font-size: clamp(1.2rem, 4vw, 2rem);
+            font-size: clamp(1.1rem, 4vw, 1.8rem);
             font-weight: 600;
-            margin-top: 1.2rem;
+            margin-top: 1.5rem;
             text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+            color: rgba(255, 255, 255, 0.9);
         }
 
-        /* Floating Menu - Mobile First */
+        /* 3D Rotating Rose */
+        .hero-rose-3d {
+            position: absolute;
+            bottom: 80px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(4rem, 12vw, 7rem);
+            animation: rose3DRotate 10s linear infinite;
+            filter: drop-shadow(0 0 40px rgba(255, 107, 107, 0.9));
+            z-index: 3;
+        }
+
+        @keyframes rose3DRotate {
+            0% { transform: translateX(-50%) rotateY(0deg) scale(1); }
+            25% { transform: translateX(-50%) rotateY(90deg) scale(1.15); }
+            50% { transform: translateX(-50%) rotateY(180deg) scale(1); }
+            75% { transform: translateX(-50%) rotateY(270deg) scale(1.15); }
+            100% { transform: translateX(-50%) rotateY(360deg) scale(1); }
+        }
+
+        /* Side Roses */
+        .side-rose {
+            position: absolute;
+            font-size: 3rem;
+            z-index: 2;
+            animation: sideRoseFloat 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 20px rgba(255, 107, 107, 0.6));
+        }
+
+        .side-rose.left { left: 5%; top: 30%; animation-delay: 0s; }
+        .side-rose.right { right: 5%; top: 40%; animation-delay: -3s; }
+        .side-rose.top-left { left: 10%; top: 15%; font-size: 2rem; animation-delay: -1.5s; }
+        .side-rose.top-right { right: 10%; top: 20%; font-size: 2.5rem; animation-delay: -4s; }
+
+        @keyframes sideRoseFloat {
+            0%, 100% { transform: translateY(0) rotate(-10deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
+        /* Floating Menu */
         .floating-menu {
             position: fixed;
             top: 20px;
             right: 20px;
             z-index: 1000;
+            display: flex;
+            gap: 15px;
         }
 
-        .menu-toggle {
+        .menu-toggle, .fullscreen-btn {
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background: rgba(255, 255, 255, 0.25);
+            background: linear-gradient(135deg, var(--rose-red), var(--pink-dark));
             backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 8px 30px var(--shadow-dark);
+            border: 3px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 10px 35px var(--shadow-dark), 0 0 25px rgba(255, 107, 107, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.2);
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
             transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            font-size: 1.8rem;
+            font-size: 1.5rem;
+            animation: menuPulse 2s infinite;
+        }
+
+        @keyframes menuPulse {
+            0%, 100% { box-shadow: 0 10px 35px var(--shadow-dark), 0 0 25px rgba(255, 107, 107, 0.5); }
+            50% { box-shadow: 0 10px 45px var(--shadow-dark), 0 0 45px rgba(255, 107, 107, 0.7); }
+        }
+
+        .menu-toggle:hover, .fullscreen-btn:hover {
+            transform: scale(1.15);
         }
 
         .menu-toggle:hover {
-            transform: scale(1.1) rotate(180deg);
-            background: rgba(255, 255, 255, 0.35);
+            transform: scale(1.15) rotate(180deg);
         }
 
         .menu-items {
             position: absolute;
             top: 70px;
             right: 0;
-            background: rgba(255, 255, 255, 0.25);
-            backdrop-filter: blur(20px);
-            border-radius: 20px;
-            border: 2px solid rgba(255, 255, 255, 0.5);
-            box-shadow: 0 15px 40px var(--shadow-dark);
-            padding: 1rem;
-            min-width: 200px;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(25px);
+            border-radius: 25px;
+            border: 3px solid rgba(255, 192, 203, 0.6);
+            box-shadow: 0 25px 60px var(--shadow-dark);
+            padding: 1.5rem;
+            min-width: 240px;
             opacity: 0;
             pointer-events: none;
-            transform: translateY(-20px) scale(0.95);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform: translateY(-25px) scale(0.9) rotateX(-20deg);
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            transform-style: preserve-3d;
         }
 
         .menu-items.active {
             opacity: 1;
             pointer-events: all;
-            transform: translateY(0) scale(1);
+            transform: translateY(0) scale(1) rotateX(0deg);
         }
 
         .menu-item {
-            padding: 0.9rem 1rem;
+            padding: 1rem 1.3rem;
             margin: 0.5rem 0;
-            background: rgba(255, 255, 255, 0.3);
-            backdrop-filter: blur(10px);
-            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(252, 228, 236, 0.9), rgba(248, 187, 208, 0.6));
+            border-radius: 15px;
             text-decoration: none;
             color: var(--pink-dark);
             display: block;
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 1rem;
             transition: all 0.3s ease;
             text-align: center;
             border: 2px solid transparent;
@@ -176,14 +361,14 @@
         .menu-item:hover {
             background: linear-gradient(135deg, var(--pink-medium), var(--rose-red));
             color: white;
-            transform: translateX(-5px);
+            transform: translateX(-10px) scale(1.03);
             border-color: rgba(255, 255, 255, 0.5);
-            box-shadow: 0 5px 15px var(--shadow);
+            box-shadow: 0 10px 25px var(--shadow);
         }
 
-        /* Content Sections - Mobile First */
+        /* Content Sections */
         .content-section {
-            padding: 3rem 1rem;
+            padding: 5rem 1.5rem;
             position: relative;
             z-index: 1;
         }
@@ -193,158 +378,297 @@
             font-size: clamp(2rem, 8vw, 4rem);
             text-align: center;
             color: var(--pink-dark);
-            margin-bottom: 2.5rem;
-            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3.5rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
             font-weight: 900;
             position: relative;
             display: inline-block;
             width: 100%;
+            transform-style: preserve-3d;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 100px;
-            height: 4px;
-            background: linear-gradient(to right, transparent, var(--rose-red), transparent);
+            width: 150px;
+            height: 5px;
+            background: linear-gradient(to right, transparent, var(--rose-red), var(--gold), var(--rose-red), transparent);
             border-radius: 3px;
+            animation: lineGlow 2s ease-in-out infinite;
         }
 
-        /* Surprise Button & Notes - Mobile First */
-        .surprise-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: center;
+        @keyframes lineGlow {
+            0%, 100% { opacity: 0.7; width: 150px; }
+            50% { opacity: 1; width: 220px; }
         }
 
-        .surprise-button {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(252, 228, 236, 0.35));
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 12px 40px var(--shadow-dark);
-            padding: 1.5rem 3rem;
-            border-radius: 50px;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--pink-dark);
-            cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            font-family: 'Noto Sans Devanagari', sans-serif;
+        /* 3D Love Letter Section */
+        .love-letter-section {
+            background: linear-gradient(135deg, #fff5f5, #ffe4e9, #fff0f5);
             position: relative;
             overflow: hidden;
-            width: 90%;
-            max-width: 400px;
         }
 
-        .surprise-button::before {
-            content: '';
+        .love-letter-section::before {
+            content: '💕';
             position: absolute;
+            font-size: 15rem;
+            opacity: 0.03;
             top: 50%;
             left: 50%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255, 23, 68, 0.3), transparent);
             transform: translate(-50%, -50%);
-            transition: width 0.6s ease, height 0.6s ease;
         }
 
-        .surprise-button:active::before {
-            width: 300px;
-            height: 300px;
+        .love-letter-container {
+            max-width: 900px;
+            margin: 0 auto;
+            perspective: 2000px;
         }
 
-        .surprise-button:active {
-            transform: scale(0.98);
-            box-shadow: 0 15px 50px var(--shadow-dark);
-            background: linear-gradient(135deg, var(--pink-light), var(--pink-lighter));
+        .love-letter {
+            background: linear-gradient(135deg, #fffafa 0%, #fff5f7 50%, #fff0f3 100%);
+            border-radius: 25px;
+            padding: 3.5rem 2.5rem;
+            box-shadow: 0 35px 70px rgba(194, 24, 91, 0.25), 0 15px 30px rgba(0, 0, 0, 0.12), inset 0 -8px 25px rgba(255, 192, 203, 0.4);
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 0.6s ease;
+            border: 4px solid rgba(255, 182, 193, 0.6);
         }
 
-        .surprise-notes {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 2.5rem;
-            opacity: 0;
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.8s ease;
+        .love-letter:hover {
+            transform: rotateY(-5deg) rotateX(5deg) translateZ(40px);
+            box-shadow: 0 55px 90px rgba(194, 24, 91, 0.35), 0 25px 50px rgba(0, 0, 0, 0.18);
         }
 
-        .surprise-notes.show {
-            opacity: 1;
-            max-height: 3000px;
+        .love-letter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 90px;
+            background: linear-gradient(135deg, var(--pink-light), var(--rose-red), var(--pink-medium));
+            border-radius: 25px 25px 0 0;
+            clip-path: polygon(0 0, 100% 0, 100% 55%, 50% 100%, 0 55%);
         }
 
-        .surprise-note {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(252, 228, 236, 0.4));
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 12px 35px var(--shadow);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
-            text-align: center;
-            font-size: 1.1rem;
-            font-family: 'Noto Sans Devanagari', sans-serif;
+        .letter-seal {
+            position: absolute;
+            top: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--deep-red), var(--crimson));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            box-shadow: 0 8px 25px rgba(183, 28, 28, 0.5);
+            z-index: 5;
+            border: 3px solid rgba(255, 215, 0, 0.5);
+        }
+
+        .letter-stamp {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            width: 75px;
+            height: 90px;
+            background: linear-gradient(135deg, #fff, #fce4ec);
+            border: 4px dashed var(--pink-dark);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.8rem;
+            transform: rotate(8deg);
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 2;
+        }
+
+        .letter-content {
+            margin-top: 80px;
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
             color: var(--pink-dark);
-            font-weight: 600;
-            animation: noteSlideUp 0.6s ease;
-            animation-fill-mode: both;
+            line-height: 2.2;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .letter-greeting {
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            color: var(--rose-red);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        .letter-signature {
+            margin-top: 2.5rem;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            color: var(--deep-red);
+            font-style: italic;
+        }
+
+        .letter-hearts {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2.5rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.25); }
+        }
+
+        /* Rose Color Meanings */
+        .rose-meanings-section {
+            background: linear-gradient(180deg, #f8bbd0, #fce4ec, #f3e5f5, #e1bee7);
+            position: relative;
+        }
+
+        .rose-meanings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .rose-meaning-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 3rem 2rem;
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+            border: 4px solid transparent;
             position: relative;
             overflow: hidden;
+            cursor: pointer;
         }
 
-        .surprise-note::before {
-            content: '💝';
+        .rose-meaning-card::before {
+            content: '';
             position: absolute;
-            top: -25px;
-            right: -25px;
-            font-size: 7rem;
-            opacity: 0.1;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
         }
 
-        .surprise-note:nth-child(1) { animation-delay: 0.1s; }
-        .surprise-note:nth-child(2) { animation-delay: 0.2s; }
-        .surprise-note:nth-child(3) { animation-delay: 0.3s; }
-
-        @keyframes noteSlideUp {
-            from {
-                opacity: 0;
-                transform: translateY(40px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        .rose-meaning-card:hover::before {
+            animation: cardShine 0.8s ease;
         }
 
-        /* Shayari Section - Mobile First */
+        @keyframes cardShine {
+            0% { left: -50%; opacity: 1; }
+            100% { left: 150%; opacity: 0; }
+        }
+
+        .rose-meaning-card:hover {
+            transform: translateY(-20px) rotateY(8deg) rotateX(-5deg) scale(1.05);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.22);
+        }
+
+        .rose-meaning-card.red { border-color: #ff1744; background: linear-gradient(135deg, #fff, #ffebee, #ffcdd2); }
+        .rose-meaning-card.pink { border-color: #e91e63; background: linear-gradient(135deg, #fff, #fce4ec, #f8bbd0); }
+        .rose-meaning-card.white { border-color: #bdbdbd; background: linear-gradient(135deg, #fff, #fafafa, #f5f5f5); }
+        .rose-meaning-card.yellow { border-color: #ffc107; background: linear-gradient(135deg, #fff, #fffde7, #fff9c4); }
+        .rose-meaning-card.orange { border-color: #ff5722; background: linear-gradient(135deg, #fff, #fff3e0, #ffe0b2); }
+        .rose-meaning-card.lavender { border-color: #9c27b0; background: linear-gradient(135deg, #fff, #f3e5f5, #e1bee7); }
+
+        .rose-emoji {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            animation: roseFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.25));
+        }
+
+        @keyframes roseFloat {
+            0%, 100% { transform: translateY(0) rotate(-8deg); }
+            50% { transform: translateY(-15px) rotate(8deg); }
+        }
+
+        .rose-meaning-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--pink-dark);
+        }
+
+        .rose-meaning-hindi {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.3rem;
+            color: var(--rose-red);
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+
+        .rose-meaning-text {
+            font-size: 1.05rem;
+            color: #555;
+            line-height: 1.7;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* 3D Flip Shayari Cards */
+        .shayari-section {
+            background: linear-gradient(to bottom, rgba(248, 187, 208, 0.8), rgba(243, 229, 245, 0.8), rgba(225, 190, 231, 0.6));
+        }
+
         .shayari-container {
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        .shayari-hint {
+            text-align: center;
+            color: var(--pink-dark);
+            margin-bottom: 2.5rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
         .shayari-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.8rem;
+            gap: 2.5rem;
+        }
+
+        .shayari-card-wrapper {
+            perspective: 2000px;
+            height: 320px;
         }
 
         .shayari-card {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.35), rgba(252, 228, 236, 0.35));
-            backdrop-filter: blur(20px);
-            border: 2px solid rgba(255, 255, 255, 0.6);
-            box-shadow: 0 12px 40px var(--shadow);
-            padding: 2.5rem 2rem;
-            border-radius: 20px;
+            width: 100%;
+            height: 100%;
             position: relative;
-            overflow: hidden;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            transform-style: preserve-3d;
+            transition: transform 0.8s cubic-bezier(0.4, 0.2, 0.2, 1);
+            cursor: pointer;
             opacity: 0;
-            transform: translateY(50px);
+            transform: translateY(60px);
         }
 
         .shayari-card.animate {
@@ -352,36 +676,208 @@
             transform: translateY(0);
         }
 
-        .shayari-card::before {
-            content: '"';
-            position: absolute;
-            top: -25px;
-            left: 12px;
-            font-size: 8rem;
-            color: rgba(255, 23, 68, 0.1);
-            font-family: 'Playfair Display', serif;
-            font-weight: 900;
+        .shayari-card.flipped {
+            transform: rotateY(180deg);
         }
 
-        .shayari-card:active {
-            transform: scale(0.98);
-            box-shadow: 0 20px 60px var(--shadow-dark);
-            border-color: var(--rose-red);
+        .shayari-front, .shayari-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2.5rem;
+            box-shadow: 0 20px 50px var(--shadow);
+        }
+
+        .shayari-front {
+            background: linear-gradient(135deg, var(--rose-red), var(--pink-dark), var(--crimson));
+            border: 4px solid rgba(255, 255, 255, 0.35);
+        }
+
+        .shayari-front-content {
+            text-align: center;
+            color: white;
+        }
+
+        .shayari-front-content .rose-icon {
+            font-size: 5rem;
+            margin-bottom: 1.5rem;
+            animation: roseFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.3));
+        }
+
+        .shayari-front-content .shayari-number {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .shayari-front-content .tap-hint {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 1rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .shayari-back {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.99), rgba(252, 228, 236, 0.99));
+            border: 4px solid var(--rose-red);
+            transform: rotateY(180deg);
         }
 
         .shayari-text {
-            font-size: 1.2rem;
-            line-height: 1.9;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            line-height: 2.1;
             color: var(--pink-dark);
             font-family: 'Noto Sans Devanagari', sans-serif;
             text-align: center;
             font-weight: 600;
             white-space: pre-line;
-            position: relative;
-            z-index: 1;
         }
 
-        /* Sweet Lines - Enhanced Tear Pages - Mobile First */
+        .shayari-text .highlight-name {
+            color: var(--rose-red);
+            font-weight: 700;
+        }
+
+        /* Love Meter Section */
+        .love-meter-section {
+            background: linear-gradient(180deg, #fce4ec, #f8bbd0, #f48fb1, #f8bbd0);
+            padding: 5rem 1rem;
+            text-align: center;
+        }
+
+        .love-meter-container {
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .love-meter {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 35px;
+            padding: 3.5rem 2.5rem;
+            box-shadow: 0 25px 60px var(--shadow);
+            border: 4px solid rgba(255, 182, 193, 0.6);
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+
+        .love-meter:hover {
+            transform: translateY(-15px) rotateX(5deg);
+            box-shadow: 0 40px 80px var(--shadow-dark);
+        }
+
+        .meter-display {
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 2.5rem;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--rose-red) 0deg,
+                var(--pink-medium) 60deg,
+                var(--gold) 120deg,
+                var(--pink-light) 180deg,
+                var(--pink-medium) 240deg,
+                var(--crimson) 300deg,
+                var(--rose-red) 360deg
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: meterRotate 15s linear infinite;
+            box-shadow: 0 0 50px rgba(255, 107, 107, 0.5), inset 0 0 50px rgba(255, 255, 255, 0.4);
+        }
+
+        @keyframes meterRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .meter-inner {
+            width: 175px;
+            height: 175px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, white, #fff5f5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: meterRotate 15s linear infinite reverse;
+            box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .meter-value {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--rose-red);
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 5px rgba(255, 23, 68, 0.3);
+        }
+
+        .meter-label {
+            font-size: 1.1rem;
+            color: var(--pink-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-weight: 600;
+        }
+
+        .love-meter-text {
+            font-size: 1.4rem;
+            color: var(--pink-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-weight: 600;
+            margin-top: 1rem;
+            line-height: 1.8;
+        }
+
+        .love-meter-text .name-highlight {
+            color: var(--rose-red);
+            font-weight: 700;
+            font-size: 1.6rem;
+        }
+
+        .love-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, rgba(255, 23, 68, 0.1), rgba(233, 30, 99, 0.1));
+            padding: 1.5rem 1rem;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 23, 68, 0.2);
+        }
+
+        .stat-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-value {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--rose-red);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--pink-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Sweet Lines Section */
+        .sweetlines-section {
+            background: linear-gradient(135deg, rgba(243, 229, 245, 0.9), rgba(252, 228, 236, 0.9), rgba(225, 190, 231, 0.8));
+        }
+
         .sweetlines-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -390,20 +886,21 @@
         .tear-pages {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 1.8rem;
+            gap: 2rem;
         }
 
         .tear-page {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 240, 245, 0.95) 100%);
-            backdrop-filter: blur(15px);
-            border: 2px solid rgba(255, 192, 203, 0.6);
-            box-shadow: 0 12px 35px var(--shadow), 0 5px 12px rgba(0, 0, 0, 0.1);
-            padding: 2.5rem 1.8rem 2rem;
-            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.99) 0%, rgba(255, 248, 250, 0.99) 100%);
+            backdrop-filter: blur(20px);
+            border: none;
+            box-shadow: 0 18px 45px var(--shadow), 0 6px 18px rgba(0, 0, 0, 0.1), inset 0 3px 12px rgba(255, 192, 203, 0.35);
+            padding: 2.8rem 2.2rem 2.5rem;
+            border-radius: 0 30px 30px 0;
             position: relative;
             transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
             opacity: 0;
             transform: translateY(50px);
+            border-left: 6px solid var(--rose-red);
         }
 
         .tear-page.animate {
@@ -415,117 +912,117 @@
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
-            width: 100%;
-            height: 18px;
-            background-image: 
-                repeating-linear-gradient(
-                    to right,
-                    transparent 0px,
-                    transparent 8px,
-                    var(--pink-light) 8px,
-                    var(--pink-light) 12px,
-                    transparent 12px,
-                    transparent 20px
-                );
+            left: -6px;
+            width: 6px;
+            height: 100%;
+            background: repeating-linear-gradient(0deg, var(--rose-red) 0px, var(--rose-red) 12px, transparent 12px, transparent 18px);
         }
 
         .tear-page::after {
-            content: '📝';
+            content: '🌹';
             position: absolute;
-            top: 22px;
-            right: 20px;
-            font-size: 2.2rem;
-            opacity: 0.3;
+            top: 18px;
+            right: 22px;
+            font-size: 2.3rem;
+            opacity: 0.35;
         }
 
-        .tear-page:active {
-            transform: scale(0.98);
-            box-shadow: 0 25px 70px var(--shadow-dark), 0 8px 20px rgba(0, 0, 0, 0.15);
+        .tear-page:hover {
+            transform: translateY(-18px) translateX(15px) rotate(1.5deg);
+            box-shadow: 0 40px 80px var(--shadow-dark), 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
         .tear-page-text {
-            font-size: 1.15rem;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
             color: var(--pink-dark);
             font-family: 'Noto Sans Devanagari', sans-serif;
             text-align: center;
             font-weight: 600;
-            line-height: 1.7;
-            margin-top: 0.8rem;
+            line-height: 1.9;
         }
 
-        /* Rose Gallery - Mobile First */
-        .rose-gallery {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .rose-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-        }
-
-        .rose-card {
-            position: relative;
-            border-radius: 20px;
-            overflow: hidden;
-            cursor: pointer;
-            transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
-            opacity: 0;
-            transform: scale(0.95);
-            box-shadow: 0 10px 30px var(--shadow);
-        }
-
-        .rose-card.animate {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .rose-card:active {
-            transform: scale(1.02);
-            box-shadow: 0 20px 60px var(--shadow-dark);
-            z-index: 10;
-        }
-
-        .rose-image {
-            width: 100%;
-            height: 280px;
-            object-fit: cover;
-            transition: all 0.6s ease;
-        }
-
-        .rose-card:active .rose-image {
-            transform: scale(1.15);
-        }
-
-        .rose-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(139, 0, 0, 0.95), rgba(139, 0, 0, 0.5), transparent);
-            padding: 2rem 1.5rem;
-            transform: translateY(0);
-            transition: all 0.5s ease;
-        }
-
-        .rose-title {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.8rem;
-            color: white;
-            margin-bottom: 0.4rem;
+        .tear-page-text .name-highlight {
+            color: var(--rose-red);
             font-weight: 700;
         }
 
-        .rose-quote {
-            font-size: 1rem;
-            color: rgba(255, 255, 255, 0.95);
-            font-family: 'Noto Sans Devanagari', sans-serif;
-            font-style: italic;
+        /* Special Message Section */
+        .special-message-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460, #1a1a2e);
+            padding: 6rem 1.5rem;
+            position: relative;
+            overflow: hidden;
         }
 
-        /* Rose Petals Animation */
+        .special-message-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="30" fill="%23ff6b6b" opacity="0.08">❤</text></svg>');
+            background-size: 70px;
+            animation: bgFloat 40s linear infinite;
+        }
+
+        @keyframes bgFloat {
+            0% { background-position: 0 0; }
+            100% { background-position: 250px 250px; }
+        }
+
+        .special-message-container {
+            max-width: 950px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .special-message-box {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(25px);
+            border-radius: 40px;
+            padding: 4.5rem 2.5rem;
+            border: 3px solid rgba(255, 107, 107, 0.35);
+            box-shadow: 0 40px 80px rgba(0, 0, 0, 0.35), 0 0 120px rgba(255, 107, 107, 0.12);
+            text-align: center;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease;
+        }
+
+        .special-message-box:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 55px 100px rgba(0, 0, 0, 0.45), 0 0 180px rgba(255, 107, 107, 0.2);
+        }
+
+        .special-message-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.8rem, 10vw, 5rem);
+            color: var(--rose-red);
+            margin-bottom: 2.5rem;
+            text-shadow: 0 0 40px rgba(255, 107, 107, 0.6);
+        }
+
+        .special-message-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            color: rgba(255, 255, 255, 0.92);
+            line-height: 2.2;
+            margin-bottom: 2.5rem;
+        }
+
+        .special-message-text .name-highlight {
+            color: var(--gold);
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        .special-message-emoji {
+            font-size: 5rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        /* Rose Petals Animation - SLOW FALL & TRANSPARENT */
         .petals {
             position: fixed;
             width: 100%;
@@ -539,51 +1036,58 @@
 
         .petal {
             position: absolute;
-            top: -80px;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, var(--rose-red), var(--pink-dark));
+            top: -100px;
+            background: radial-gradient(ellipse, rgba(255, 23, 68, 0.4) 20%, rgba(194, 24, 91, 0.3) 60%, rgba(233, 30, 99, 0.2));
             border-radius: 50% 0 50% 0;
-            opacity: 0.7;
-            animation: petalFall linear infinite;
+            opacity: 0.3;
+            animation: petalFallSlow linear infinite;
+            box-shadow: 0 8px 20px rgba(255, 23, 68, 0.2);
         }
 
-        @keyframes petalFall {
-            to {
-                top: 120%;
-                transform: translateX(100px) rotate(720deg);
+        @keyframes petalFallSlow {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateX(100px) rotate(360deg) scale(1.1);
+            }
+            95% {
+                opacity: 0.3;
+            }
+            100% {
+                top: 110%;
+                transform: translateX(-50px) rotate(720deg) scale(0.9);
+                opacity: 0;
             }
         }
 
         /* Scroll Indicator */
         .scroll-indicator {
             position: absolute;
-            bottom: 30px;
+            bottom: 35px;
             left: 50%;
             transform: translateX(-50%);
             color: white;
-            font-size: 2.2rem;
+            font-size: 2.8rem;
             animation: scrollBounce 2s infinite;
             z-index: 10;
-            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
+            filter: drop-shadow(0 0 18px rgba(0, 0, 0, 0.7));
         }
 
         @keyframes scrollBounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateX(-50%) translateY(0);
-            }
-            40% {
-                transform: translateX(-50%) translateY(-20px);
-            }
-            60% {
-                transform: translateX(-50%) translateY(-12px);
-            }
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-30px); }
+            60% { transform: translateX(-50%) translateY(-18px); }
         }
 
         @keyframes heroFadeIn {
             from {
                 opacity: 0;
-                transform: translateY(60px);
+                transform: translateY(70px);
             }
             to {
                 opacity: 1;
@@ -591,86 +1095,112 @@
             }
         }
 
-        /* Tablet Responsive */
-        @media (min-width: 600px) {
-            .surprise-notes {
-                grid-template-columns: repeat(2, 1fr);
-            }
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--rose-red), var(--pink-dark), var(--deep-red));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
 
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: white;
+        }
+
+        .loader-rose {
+            font-size: 7rem;
+            animation: loaderPulse 1.2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.5));
+        }
+
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(10deg); }
+        }
+
+        .loader-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem;
+            margin-top: 1.5rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .loader-subtext {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        /* Responsive Styles */
+        @media (min-width: 600px) {
             .shayari-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             .tear-pages {
                 grid-template-columns: repeat(2, 1fr);
-            }
-
-            .rose-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .surprise-button {
-                width: auto;
             }
         }
 
-        /* Desktop Responsive */
         @media (min-width: 1024px) {
-            .hero {
-                background-attachment: fixed;
-            }
-
             .content-section {
-                padding: 5rem 2rem;
-            }
-
-            .surprise-notes {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2.5rem;
+                padding: 7rem 2.5rem;
             }
 
             .shayari-grid {
-                gap: 2.5rem;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .shayari-card-wrapper {
+                height: 380px;
             }
 
             .tear-pages {
                 grid-template-columns: repeat(3, 1fr);
-                gap: 2.5rem;
+                gap: 3rem;
             }
 
-            .rose-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
+            .hero-content h1 {
+                font-size: 7rem;
             }
 
-            .shayari-card:hover {
-                transform: translateY(-12px) rotate(1deg);
-                box-shadow: 0 20px 60px var(--shadow-dark);
-                border-color: var(--rose-red);
-            }
-
-            .tear-page:hover {
-                transform: translateY(-15px) scale(1.02);
-                box-shadow: 0 25px 70px var(--shadow-dark), 0 8px 20px rgba(0, 0, 0, 0.15);
-            }
-
-            .rose-card:hover {
-                transform: scale(1.05) rotate(-1deg);
-                box-shadow: 0 20px 60px var(--shadow-dark);
-            }
-
-            .rose-image {
-                height: 320px;
+            .couple-names {
+                font-size: 5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Rose Petals -->
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-rose">🌹</div>
+            <div class="loader-text">Rohit ❤️ Daulat</div>
+            <div class="loader-subtext">तुम्हारे लिए कुछ खास 💕</div>
+        </div>
+    </div>
+
+    <!-- Rose Petals - Slow Fall & Transparent -->
     <div class="petals" id="petals"></div>
 
     <!-- Floating Menu -->
     <div class="floating-menu">
+        <div class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()">⛶</div>
         <div class="menu-toggle" onclick="toggleMenu()">💕</div>
         <div class="menu-items" id="menuItems">
             <a href="index.html" class="menu-item">🏠 Home</a>
@@ -681,191 +1211,354 @@
             <a href="e.html" class="menu-item">🤝 Promise Day</a>
             <a href="f.html" class="menu-item">🤗 Hug Day</a>
             <a href="g.html" class="menu-item">💋 Kiss Day</a>
+            <a href="h.html" class="menu-item">❤️ Valentine Day</a>
         </div>
     </div>
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="hero-content">
-            <h1>🌹 Rose Day 🌹</h1>
-            <div class="hindi-title">गुलाब दिवस</div>
-            <p class="date">7 February - प्यार का इज़हार</p>
+        <div class="hero-bg-animation">
+            <div class="floating-circle" style="width: 350px; height: 350px; top: 8%; left: 8%;"></div>
+            <div class="floating-circle" style="width: 250px; height: 250px; top: 55%; right: 8%; animation-delay: -5s;"></div>
+            <div class="floating-circle" style="width: 180px; height: 180px; bottom: 15%; left: 25%; animation-delay: -10s;"></div>
+            <div class="floating-circle" style="width: 120px; height: 120px; top: 35%; right: 30%; animation-delay: -7s;"></div>
         </div>
+
+        <!-- Side Roses -->
+        <div class="side-rose left">🌹</div>
+        <div class="side-rose right">🌹</div>
+        <div class="side-rose top-left">🌹</div>
+        <div class="side-rose top-right">🌹</div>
+
+        <!-- Sparkles -->
+        <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 30%; right: 20%; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 45%; right: 15%; animation-delay: 1.5s;"></div>
+        <div class="sparkle" style="bottom: 25%; left: 10%; animation-delay: 0.3s;"></div>
+        <div class="sparkle" style="bottom: 35%; right: 25%; animation-delay: 0.8s;"></div>
+        <div class="sparkle" style="top: 15%; left: 40%; animation-delay: 1.2s;"></div>
+        <div class="sparkle" style="bottom: 40%; right: 40%; animation-delay: 0.6s;"></div>
+
+        <div class="hero-content">
+            <div class="couple-names">
+                <span class="name-rohit">Rohit</span>
+                <span class="loves">❤️</span>
+                <span class="name-daulat">Daulat</span>
+            </div>
+            <h1>Happy Rose Day</h1>
+            <div class="hindi-subtitle">तुम मेरी सबसे खूबसूरत दौलत हो 🌹</div>
+            <p class="date">7 February 2025 💕</p>
+        </div>
+        <div class="hero-rose-3d">🌹</div>
         <div class="scroll-indicator">↓</div>
     </section>
 
-    <!-- Surprise Notes Section -->
-    <section class="content-section" style="background: linear-gradient(135deg, rgba(252, 228, 236, 0.8), rgba(248, 187, 208, 0.8));">
-        <div class="surprise-container">
-            <h2 class="section-title">✨ सरप्राइज नोट्स ✨</h2>
-            <button class="surprise-button" onclick="toggleSurprise()">
-                🎁 सरप्राइज खोलो 🎁
-            </button>
-            <div class="surprise-notes" id="surpriseNotes"></div>
+    <!-- Love Letter Section -->
+    <section class="content-section love-letter-section">
+        <h2 class="section-title">💌 दौलत के नाम 💌</h2>
+        <div class="love-letter-container">
+            <div class="love-letter">
+                <div class="letter-seal">❤️</div>
+                <div class="letter-stamp">🌹</div>
+                <div class="letter-content">
+                    <div class="letter-greeting">मेरी प्यारी दौलत ❤️</div>
+                    <p>
+                        तुम मेरी ज़िन्दगी की सबसे खूबसूरत गुलाब हो। जब से तुम मेरी ज़िन्दगी में आई हो, हर दिन खास हो गया है। तुम्हारी मुस्कान में वो जादू है जो मेरी सारी थकान मिटा देती है।
+                        <br><br>
+                        दौलत, तुम मेरी हर सुबह की पहली खुशी हो और हर रात का आखिरी ख्याल। तुम्हारे बिना मैं अधूरा हूँ। तुम्हारी आँखों में मेरी पूरी दुनिया बसती है।
+                        <br><br>
+                        इस Rose Day पर मैं तुम्हें अपने दिल का सबसे खूबसूरत गुलाब देता हूँ - अपना प्यार! मैं तुमसे बेइंतहा मोहब्बत करता हूँ। तुम हमेशा ऐसे ही मुस्कुराती रहो जान! 💕
+                    </p>
+                    <div class="letter-signature">~ तुम्हारा रोहित, हमेशा के लिए ❤️</div>
+                </div>
+                <div class="letter-hearts">💕 🌹 💕</div>
+            </div>
         </div>
     </section>
 
-    <!-- Shayari Section -->
-    <section class="content-section" style="background: linear-gradient(to bottom, rgba(248, 187, 208, 0.6), rgba(243, 229, 245, 0.6));">
+    <!-- Rose Color Meanings -->
+    <section class="content-section rose-meanings-section">
+        <h2 class="section-title">🌹 गुलाब के रंग और उनके मायने 🌹</h2>
+        <div class="rose-meanings-grid">
+            
+            <div class="rose-meaning-card red">
+                <span class="rose-emoji">🌹</span>
+                <div class="rose-meaning-title">Red Rose</div>
+                <div class="rose-meaning-hindi">लाल गुलाब</div>
+                <div class="rose-meaning-text">ये लाल गुलाब मेरे सच्चे प्यार का प्रतीक है। दौलत, तुम मेरी धड़कन हो! 💕</div>
+            </div>
+
+            <div class="rose-meaning-card pink">
+                <span class="rose-emoji">🌸</span>
+                <div class="rose-meaning-title">Pink Rose</div>
+                <div class="rose-meaning-hindi">गुलाबी गुलाब</div>
+                <div class="rose-meaning-text">तुम मेरे लिए बहुत खास हो। तुम्हारे लिए मेरे दिल में बहुत कोमल भावनाएं हैं। 💖</div>
+            </div>
+
+            <div class="rose-meaning-card white">
+                <span class="rose-emoji">🤍</span>
+                <div class="rose-meaning-title">White Rose</div>
+                <div class="rose-meaning-hindi">सफ़ेद गुलाब</div>
+                <div class="rose-meaning-text">मेरा प्यार तुम्हारे लिए पवित्र है। तुम मेरी ज़िन्दगी में नई शुरुआत हो। ✨</div>
+            </div>
+
+            <div class="rose-meaning-card yellow">
+                <span class="rose-emoji">💛</span>
+                <div class="rose-meaning-title">Yellow Rose</div>
+                <div class="rose-meaning-hindi">पीला गुलाब</div>
+                <div class="rose-meaning-text">दौलत, तुम मेरी सबसे अच्छी दोस्त भी हो। तुम्हारे साथ हर पल खुशी है। 🌟</div>
+            </div>
+
+            <div class="rose-meaning-card orange">
+                <span class="rose-emoji">🧡</span>
+                <div class="rose-meaning-title">Orange Rose</div>
+                <div class="rose-meaning-hindi">नारंगी गुलाब</div>
+                <div class="rose-meaning-text">तुम्हारे लिए मेरे दिल में जोश और उत्साह है। तुम्हें देखकर दिल धड़कता है। 🔥</div>
+            </div>
+
+            <div class="rose-meaning-card lavender">
+                <span class="rose-emoji">💜</span>
+                <div class="rose-meaning-title">Lavender Rose</div>
+                <div class="rose-meaning-hindi">लैवेंडर गुलाब</div>
+                <div class="rose-meaning-text">जब पहली बार तुम्हें देखा, दिल कह उठा - यही है मेरी दौलत! 💫</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3D Flip Shayari Section -->
+    <section class="content-section shayari-section">
         <div class="shayari-container">
-            <h2 class="section-title">💖 रोमांटिक शायरी 💖</h2>
-            <div class="shayari-grid" id="shayariGrid"></div>
+            <h2 class="section-title">💖 दौलत के लिए शायरी 💖</h2>
+            <p class="shayari-hint">✨ कार्ड पर क्लिक करो शायरी पढ़ने के लिए ✨</p>
+            <div class="shayari-grid">
+                
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="rose-icon">🌹</span>
+                                <div class="shayari-number">शायरी #1</div>
+                                <div class="tap-hint">क्लिक करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text"><span class="highlight-name">दौलत</span> तू मेरी सबसे बड़ी दौलत है,
+तेरा प्यार मेरी सबसे बड़ी इबादत है।
+गुलाब भी तुझसे शरमाए,
+तेरी खूबसूरती बेमिसाल है। 🌹</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="rose-icon">🌹</span>
+                                <div class="shayari-number">शायरी #2</div>
+                                <div class="tap-hint">क्लिक करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text"><span class="highlight-name">दौलत</span> के बिना अधूरा हूँ मैं,
+तेरे बिना बेकरार हूँ मैं।
+तू है मेरी ज़िन्दगी की रौशनी,
+तेरे इंतज़ार में खड़ा हूँ मैं। 💕</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="rose-icon">🌹</span>
+                                <div class="shayari-number">शायरी #3</div>
+                                <div class="tap-hint">क्लिक करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">तेरे नाम में ही मेरी <span class="highlight-name">दौलत</span> है,
+तेरी हर अदा में मेरी जन्नत है।
+रोहित की ज़िन्दगी तुझसे है,
+तू ही मेरी असली दौलत है। ✨</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="rose-icon">🌹</span>
+                                <div class="shayari-number">शायरी #4</div>
+                                <div class="tap-hint">क्लिक करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">गुलाब की तरह खिलती हो <span class="highlight-name">दौलत</span>,
+मेरी ज़िन्दगी में महकती हो।
+हर पल तुम्हारे बिना अधूरा है,
+तुम मेरी खुशियों की वजह हो। 💖</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="rose-icon">🌹</span>
+                                <div class="shayari-number">शायरी #5</div>
+                                <div class="tap-hint">क्लिक करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">ए <span class="highlight-name">दौलत</span> तू ही मेरी मंज़िल है,
+तेरा साथ ही मेरी मोहब्बत है।
+गुलाब की तरह खिली रहो हमेशा,
+तुम मेरी हर खुशी की वजह हो। 🌺</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="rose-icon">🌹</span>
+                                <div class="shayari-number">शायरी #6</div>
+                                <div class="tap-hint">क्लिक करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text"><span class="highlight-name">दौलत</span> तेरी मुस्कान है मेरी जान,
+तू ही मेरा सुकून, मेरा अरमान।
+गुलाब की खुशबू सी महकती हो,
+तू मेरी हर सांस में बसती हो। 🌹</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Love Meter -->
+    <section class="love-meter-section">
+        <div class="love-meter-container">
+            <h2 class="section-title">💗 दौलत के लिए रोहित का प्यार 💗</h2>
+            <div class="love-meter">
+                <div class="meter-display">
+                    <div class="meter-inner">
+                        <div class="meter-value" id="loveMeterValue">∞</div>
+                        <div class="meter-label">प्यार</div>
+                    </div>
+                </div>
+                <div class="love-meter-text">
+                    <span class="name-highlight">दौलत</span> के लिए मेरी मोहब्बत बेहद है! 💕
+                    <br>तुम मेरी सबसे अनमोल दौलत हो! 🌹
+                </div>
+                <div class="love-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">💕</div>
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">प्यार</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">🌹</div>
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">वफ़ादारी</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">💖</div>
+                        <div class="stat-value">Forever</div>
+                        <div class="stat-label">साथ</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Sweet Lines Section -->
-    <section class="content-section" style="background: linear-gradient(135deg, rgba(243, 229, 245, 0.7), rgba(252, 228, 236, 0.7));">
+    <section class="content-section sweetlines-section">
         <div class="sweetlines-container">
-            <h2 class="section-title">💕 मीठी बातें 💕</h2>
-            <div class="tear-pages" id="tearPages"></div>
+            <h2 class="section-title">💕 दौलत के लिए मीठी बातें 💕</h2>
+            <div class="tear-pages">
+                
+                <div class="tear-page">
+                    <div class="tear-page-text"><span class="name-highlight">दौलत</span>, तुम्हारी मुस्कान मेरी सबसे बड़ी खुशी है 🌹</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">तुम्हारे साथ हर लम्हा खास है मेरे लिए <span class="name-highlight">दौलत</span> 💕</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">तुम गुलाब से भी ज्यादा खूबसूरत हो जान 🌺</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text"><span class="name-highlight">दौलत</span>, तुम्हारी खुशबू हर फूल से प्यारी है 🌸</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">तुम मेरे दिल की सबसे अनमोल <span class="name-highlight">दौलत</span> हो 💖</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">तुम्हारी आँखों में मेरी दुनिया बसती है <span class="name-highlight">दौलत</span> 👀💕</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text"><span class="name-highlight">दौलत</span>, तुम मेरी हर सुबह की पहली खुशी हो ☀️</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">तुम्हारे बिना अधूरी है मेरी ज़िन्दगी जान 💝</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">रोहित की <span class="name-highlight">दौलत</span> सिर्फ तुम हो, हमेशा के लिए 🌹</div>
+                </div>
+
+            </div>
         </div>
     </section>
 
-    <!-- Rose Gallery Section -->
-    <section class="content-section" style="background: linear-gradient(to bottom, rgba(252, 228, 236, 0.8), rgba(248, 187, 208, 0.8));">
-        <div class="rose-gallery">
-            <h2 class="section-title">🌹 गुलाब की यादें 🌹</h2>
-            <div class="rose-grid" id="roseGrid"></div>
+    <!-- Special Message Section -->
+    <section class="special-message-section">
+        <div class="special-message-container">
+            <div class="special-message-box">
+                <h2 class="special-message-title">दौलत के लिए खास 💝</h2>
+                <p class="special-message-text">
+                    मेरी प्यारी <span class="name-highlight">दौलत</span>, इस Rose Day पर मैं तुमसे यही कहना चाहता हूँ कि तुम मेरी ज़िन्दगी की सबसे खूबसूरत गुलाब हो। 
+                    तुम्हारे बिना मेरी ज़िन्दगी अधूरी है। तुम मेरे दिल की धड़कन हो, मेरी हर सांस में तुम्हारा नाम है।
+                    <br><br>
+                    💝 <span class="name-highlight">दौलत</span>, तुमसे मिलकर मुझे पता चला कि प्यार क्या होता है। तुम मेरी हर खुशी और गम में साथ हो। 
+                    तुम मेरी ज़िन्दगी में वो रोशनी हो जो कभी नहीं बुझती। मैं तुम्हें हमेशा खुश रखने का वादा करता हूँ।
+                    <br><br>
+                    🌹 तुम दुनिया की सबसे खूबसूरत लड़की हो। मैं बहुत Lucky हूँ कि तुम मेरी हो। 
+                    <span class="name-highlight">दौलत</span>, तुम हमेशा मेरी रहना। ❤️
+                </p>
+                <div class="special-message-emoji">🌹❤️🌹</div>
+            </div>
         </div>
     </section>
 
     <script>
-        const jsonData = {
-            "roseDay": {
-                "title": "Rose Day",
-                "date": "7 February",
-                "hindiTitle": "गुलाब दिवस",
-                "shayari": [
-                    "गुलाब की खुशबू में बसा है तेरा प्यार,\nहर पंखुड़ी में लिखा है तुझसे इकरार।",
-                    "लाल गुलाब सा है तेरा प्यार मेरे लिए,\nतू ही मेरी ज़िन्दगी का इकलौता सहारा है।",
-                    "इस गुलाब की तरह मुस्कुराओ हमेशा,\nतुम्हारी हंसी में ही मेरी खुशियाँ बसती हैं।",
-                    "तेरी मोहब्बत गुलाब सी खिलती है,\nमेरे दिल के बगीचे में रंग भरती है।",
-                    "गुलाब की तरह नाज़ुक है प्यार हमारा,\nसंभाल के रखना है ये रिश्ता हमारा।"
-                ],
-                "sweetLines": [
-                    "तुम मेरे दिल के सबसे खूबसूरत गुलाब हो 🌹",
-                    "तेरी मुस्कान से खिलता है मेरा दिल 💕",
-                    "हर दिन तुम्हें गुलाब देना चाहता हूँ 🌹",
-                    "तुम्हारे बिना ज़िन्दगी बेरंग है 💖",
-                    "तुम्हारी खुशबू गुलाब से भी प्यारी है 🌹",
-                    "मेरे दिल का बगीचा तुमसे खिलता है 💝"
-                ],
-                "surpriseNotes": [
-                    "तुम्हें पाकर मैं दुनिया का सबसे खुशनसीब इंसान हूँ! हर दिन तुम्हारे साथ एक नया गुलाब की तरह खिलता है! 🌹❤️",
-                    "तुम्हारी हर अदा पर मैं फ़िदा हूँ! तुम्हारी आँखों में झाँकना मुझे जन्नत का एहसास देता है! 💕✨",
-                    "तुम हो तो सब कुछ है, तुम नहीं तो कुछ नहीं! तुम मेरी ज़िन्दगी की सबसे खूबसूरत गुलाब हो! 🌹💖"
-                ],
-                "roses": [
-                    {
-                        "title": "Red Rose",
-                        "image": "https://images.unsplash.com/photo-1490750967868-88aa4486c946?q=80&w=800",
-                        "quote": "लाल गुलाब - सच्चे प्यार का प्रतीक"
-                    },
-                    {
-                        "title": "Pink Rose",
-                        "image": "https://images.unsplash.com/photo-1563241527-3004b7be0ffd?q=80&w=800",
-                        "quote": "गुलाबी गुलाब - कोमल भावनाओं का संदेश"
-                    },
-                    {
-                        "title": "White Rose",
-                        "image": "https://images.unsplash.com/photo-1518709594023-6eab9bab7b23?q=80&w=800",
-                        "quote": "सफ़ेद गुलाब - पवित्र प्रेम की निशानी"
-                    },
-                    {
-                        "title": "Yellow Rose",
-                        "image": "https://images.unsplash.com/photo-1561238881-03f8e11bfb0f?q=80&w=800",
-                        "quote": "पीला गुलाब - दोस्ती और खुशियों का प्रतीक"
-                    },
-                    {
-                        "title": "Orange Rose",
-                        "image": "https://images.unsplash.com/photo-1582794543139-8ac9cb0f7b11?q=80&w=800",
-                        "quote": "नारंगी गुलाब - जोश और उत्साह की निशानी"
-                    },
-                    {
-                        "title": "Rose Bouquet",
-                        "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?q=80&w=800",
-                        "quote": "गुलदस्ता - प्यार का सबसे खूबसूरत तोहफा"
-                    }
-                ]
-            }
-        };
+        // Hide loader after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 2000);
+            
+            initAnimations();
+        });
 
-        const data = jsonData.roseDay;
-
-        // Create surprise notes
-        function createSurpriseNotes() {
-            const container = document.getElementById('surpriseNotes');
-            data.surpriseNotes.forEach(note => {
-                const div = document.createElement('div');
-                div.className = 'surprise-note';
-                div.textContent = note;
-                container.appendChild(div);
-            });
-        }
-
-        // Toggle surprise
-        function toggleSurprise() {
-            document.getElementById('surpriseNotes').classList.toggle('show');
-        }
-
-        // Create shayari
-        function createShayari() {
-            const grid = document.getElementById('shayariGrid');
-            data.shayari.forEach((shayari, index) => {
-                const card = document.createElement('div');
-                card.className = 'shayari-card';
-                card.style.transitionDelay = `${index * 0.12}s`;
-                card.innerHTML = `<div class="shayari-text">${shayari}</div>`;
-                grid.appendChild(card);
-            });
-        }
-
-        // Create sweet lines
-        function createSweetLines() {
-            const container = document.getElementById('tearPages');
-            data.sweetLines.forEach((line, index) => {
-                const page = document.createElement('div');
-                page.className = 'tear-page';
-                page.style.transitionDelay = `${index * 0.1}s`;
-                page.innerHTML = `<div class="tear-page-text">${line}</div>`;
-                container.appendChild(page);
-            });
-        }
-
-        // Create rose gallery
-        function createRoseGallery() {
-            const grid = document.getElementById('roseGrid');
-            data.roses.forEach((rose, index) => {
-                const card = document.createElement('div');
-                card.className = 'rose-card';
-                card.style.transitionDelay = `${index * 0.08}s`;
-                card.innerHTML = `
-                    <img src="${rose.image}" alt="${rose.title}" class="rose-image">
-                    <div class="rose-overlay">
-                        <div class="rose-title">${rose.title}</div>
-                        <div class="rose-quote">${rose.quote}</div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        // Intersection Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('animate');
-                }
-            });
-        }, { threshold: 0.15, rootMargin: '-20px' });
-
-        setTimeout(() => {
-            document.querySelectorAll('.shayari-card, .tear-page, .rose-card').forEach(el => {
-                observer.observe(el);
-            });
-        }, 100);
-
-        // Toggle menu
+        // Menu toggle
         function toggleMenu() {
             document.getElementById('menuItems').classList.toggle('active');
         }
@@ -877,27 +1570,91 @@
             }
         });
 
-        // Create falling petals
+        // Fullscreen toggle
+        function toggleFullscreen() {
+            const btn = document.getElementById('fullscreenBtn');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().then(() => {
+                    btn.textContent = '⛶';
+                }).catch(err => {
+                    console.log('Fullscreen error:', err);
+                });
+            } else {
+                document.exitFullscreen().then(() => {
+                    btn.textContent = '⛶';
+                });
+            }
+        }
+
+        // Update fullscreen button on change
+        document.addEventListener('fullscreenchange', () => {
+            const btn = document.getElementById('fullscreenBtn');
+            btn.textContent = document.fullscreenElement ? '✕' : '⛶';
+        });
+
+        // SLOW & TRANSPARENT Falling petals
         function createPetals() {
             const container = document.getElementById('petals');
+            
             setInterval(() => {
                 const petal = document.createElement('div');
                 petal.className = 'petal';
                 petal.style.left = Math.random() * 100 + '%';
-                petal.style.animationDuration = (Math.random() * 4 + 7) + 's';
-                petal.style.opacity = Math.random() * 0.4 + 0.5;
+                
+                // SLOW animation - 20-30 seconds
+                const duration = Math.random() * 10 + 20;
+                petal.style.animationDuration = duration + 's';
+                
+                // More transparent
+                petal.style.opacity = Math.random() * 0.2 + 0.2;
+                
+                // Varied sizes
+                const size = Math.random() * 15 + 10;
+                petal.style.width = size + 'px';
+                petal.style.height = size + 'px';
+                
                 container.appendChild(petal);
-                setTimeout(() => petal.remove(), 11000);
-            }, 700);
+                
+                // Remove after animation
+                setTimeout(() => petal.remove(), duration * 1000 + 1000);
+            }, 1200);
         }
 
-        // Initialize
-        window.addEventListener('load', () => {
-            createSurpriseNotes();
-            createShayari();
-            createSweetLines();
-            createRoseGallery();
+        // Love meter animation
+        function animateLoveMeter() {
+            const values = ['∞', '100%', '💯', '💕', '∞', '❤️', '🌹', 'Forever'];
+            let index = 0;
+            setInterval(() => {
+                document.getElementById('loveMeterValue').textContent = values[index];
+                index = (index + 1) % values.length;
+            }, 2500);
+        }
+
+        // Intersection Observer for animations
+        function initAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '-40px' });
+
+            document.querySelectorAll('.shayari-card, .tear-page').forEach(el => {
+                observer.observe(el);
+            });
+
             createPetals();
+            animateLoveMeter();
+        }
+
+        // Parallax effect on scroll
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            if (hero) {
+                hero.style.backgroundPositionY = scrolled * 0.4 + 'px';
+            }
         });
     </script>
 </body>
