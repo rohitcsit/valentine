@@ -1,0 +1,1815 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🍫 Happy Chocolate Day - Rohit ❤️ Daulat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --chocolate-dark: #3d1f0d;
+            --chocolate-medium: #6b3e26;
+            --chocolate-light: #8b5a3c;
+            --chocolate-cream: #d4a574;
+            --caramel: #c68642;
+            --gold: #ffd700;
+            --gold-dark: #daa520;
+            --cocoa: #4a2c17;
+            --milk-chocolate: #7b3f00;
+            --white-chocolate: #fff8e7;
+            --pink: #e91e63;
+            --white: #ffffff;
+            --shadow: rgba(61, 31, 13, 0.4);
+            --shadow-dark: rgba(74, 44, 23, 0.5);
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #fff8e7 0%, #f5e6d3 50%, #ffe4c9 100%);
+            color: #333;
+            perspective: 1000px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to bottom, #fff8e7, #f5e6d3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--chocolate-medium), var(--chocolate-dark));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--chocolate-dark), var(--cocoa));
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1481391319762-47dff72954d9?q=80&w=2400');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                background-attachment: fixed;
+            }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(61, 31, 13, 0.80) 0%, rgba(107, 62, 38, 0.70) 50%, rgba(74, 44, 23, 0.80) 100%);
+            backdrop-filter: blur(3px);
+        }
+
+        /* Animated Background Elements */
+        .hero-bg-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(198, 134, 66, 0.25), transparent);
+            animation: floatCircle 25s infinite ease-in-out;
+            filter: blur(3px);
+        }
+
+        @keyframes floatCircle {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(30px, -30px) scale(1.1) rotate(90deg); }
+            50% { transform: translate(-20px, 20px) scale(0.95) rotate(180deg); }
+            75% { transform: translate(25px, 25px) scale(1.05) rotate(270deg); }
+        }
+
+        /* Sparkle Stars */
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--caramel);
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+            box-shadow: 0 0 10px var(--caramel), 0 0 20px var(--gold);
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            animation: heroFadeIn 1.5s ease;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 0.5rem;
+        }
+
+        /* Couple Names */
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(1.8rem, 7vw, 5rem);
+            margin-bottom: 0.8rem;
+            animation: coupleGlow 3s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(198, 134, 66, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.3;
+        }
+
+        .couple-names .name-rohit {
+            color: #fff;
+            display: inline-block;
+            animation: floatName 4s ease-in-out infinite;
+        }
+
+        .couple-names .loves {
+            color: var(--caramel);
+            display: inline-block;
+            font-size: clamp(1.5rem, 6vw, 4rem);
+            margin: 0 0.3rem;
+            animation: heartPulse 1.5s ease-in-out infinite;
+            text-shadow: 0 0 15px rgba(198, 134, 66, 0.8);
+        }
+
+        .couple-names .name-daulat {
+            color: var(--chocolate-cream);
+            display: inline-block;
+            animation: floatName 4s ease-in-out infinite reverse;
+            text-shadow: 0 0 20px rgba(212, 165, 116, 0.9);
+        }
+
+        @keyframes floatName {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes coupleGlow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(198, 134, 66, 0.5)); }
+            50% { filter: drop-shadow(0 0 30px rgba(198, 134, 66, 0.8)); }
+        }
+
+        /* Hero Title with visible chocolates */
+        .hero-title {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .hero-title .choco-emoji {
+            font-size: clamp(2rem, 8vw, 5rem);
+            animation: chocoFloat 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(198, 134, 66, 0.8));
+        }
+
+        .hero-title .choco-emoji:first-child {
+            animation-delay: 0s;
+        }
+
+        .hero-title .choco-emoji:last-child {
+            animation-delay: -1.5s;
+        }
+
+        .hero-title .title-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.2rem, 9vw, 6rem);
+            font-weight: 400;
+            background: linear-gradient(135deg, #fff, #d4a574, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.7));
+            text-shadow: none;
+        }
+
+        @keyframes chocoFloat {
+            0%, 100% { transform: translateY(0) rotate(-10deg); }
+            50% { transform: translateY(-12px) rotate(10deg); }
+        }
+
+        .hero-content .hindi-subtitle {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(0.9rem, 3.5vw, 1.8rem);
+            font-weight: 500;
+            margin-top: 0.8rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            color: #f5e6d3;
+            letter-spacing: 1px;
+            animation: subtitlePulse 3s ease-in-out infinite;
+            padding: 0 0.5rem;
+            line-height: 1.5;
+        }
+
+        @keyframes subtitlePulse {
+            0%, 100% { opacity: 0.9; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.01); }
+        }
+
+        .hero-content .date {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1rem, 3.5vw, 1.6rem);
+            font-weight: 600;
+            margin-top: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* 3D Rotating Chocolate */
+        .hero-choco-3d {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(3rem, 10vw, 6rem);
+            animation: choco3DRotate 8s linear infinite;
+            filter: drop-shadow(0 0 30px rgba(198, 134, 66, 0.9));
+            z-index: 3;
+        }
+
+        @keyframes choco3DRotate {
+            0% { transform: translateX(-50%) rotateY(0deg) scale(1); }
+            25% { transform: translateX(-50%) rotateY(90deg) scale(1.15); }
+            50% { transform: translateX(-50%) rotateY(180deg) scale(1); }
+            75% { transform: translateX(-50%) rotateY(270deg) scale(1.15); }
+            100% { transform: translateX(-50%) rotateY(360deg) scale(1); }
+        }
+
+        /* Side Chocolates - Hidden on small mobile */
+        .side-choco {
+            position: absolute;
+            font-size: 2rem;
+            z-index: 2;
+            animation: sideChocoFloat 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(198, 134, 66, 0.6));
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .side-choco {
+                display: block;
+            }
+        }
+
+        .side-choco.left { left: 3%; top: 30%; animation-delay: 0s; }
+        .side-choco.right { right: 3%; top: 40%; animation-delay: -3s; }
+        .side-choco.top-left { left: 8%; top: 15%; font-size: 1.5rem; animation-delay: -1.5s; }
+        .side-choco.top-right { right: 8%; top: 20%; font-size: 1.8rem; animation-delay: -4s; }
+
+        @keyframes sideChocoFloat {
+            0%, 100% { transform: translateY(0) rotate(-15deg); }
+            50% { transform: translateY(-15px) rotate(15deg); }
+        }
+
+        /* Floating Menu */
+        .floating-menu {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu-toggle, .fullscreen-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--chocolate-medium), var(--chocolate-dark));
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(198, 134, 66, 0.5);
+            box-shadow: 0 8px 25px var(--shadow-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 768px) {
+            .menu-toggle, .fullscreen-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .menu-toggle:active, .fullscreen-btn:active {
+            transform: scale(0.95);
+        }
+
+        .menu-items {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(25px);
+            border-radius: 20px;
+            border: 2px solid rgba(198, 134, 66, 0.6);
+            box-shadow: 0 20px 50px var(--shadow-dark);
+            padding: 1rem;
+            min-width: 200px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-20px) scale(0.9);
+            transition: all 0.4s ease;
+        }
+
+        .menu-items.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0) scale(1);
+        }
+
+        .menu-item {
+            padding: 0.8rem 1rem;
+            margin: 0.4rem 0;
+            background: linear-gradient(135deg, rgba(255, 248, 231, 0.9), rgba(245, 230, 211, 0.6));
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--chocolate-dark);
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .menu-item:active {
+            background: linear-gradient(135deg, var(--chocolate-medium), var(--chocolate-dark));
+            color: white;
+            transform: scale(0.98);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 3rem 1rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .content-section {
+                padding: 5rem 1.5rem;
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 6vw, 3.5rem);
+            text-align: center;
+            color: var(--chocolate-dark);
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            padding: 0 0.5rem;
+            line-height: 1.4;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--chocolate-medium), var(--caramel), var(--chocolate-medium), transparent);
+            border-radius: 3px;
+        }
+
+        /* Love Letter Section */
+        .love-letter-section {
+            background: linear-gradient(135deg, #fff8e7, #f5e6d3, #ffe4c9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .love-letter {
+            background: linear-gradient(135deg, #fffafa 0%, #fff8e7 50%, #fff5f0 100%);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 25px 50px rgba(61, 31, 13, 0.2), 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 3px solid rgba(198, 134, 66, 0.6);
+        }
+
+        @media (min-width: 768px) {
+            .love-letter {
+                padding: 3.5rem 2.5rem;
+            }
+        }
+
+        .love-letter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: linear-gradient(135deg, var(--chocolate-light), var(--chocolate-medium), var(--chocolate-dark));
+            border-radius: 20px 20px 0 0;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+        }
+
+        .letter-seal {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--caramel), var(--chocolate-cream));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 6px 20px rgba(198, 134, 66, 0.5);
+            z-index: 5;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .letter-stamp {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 55px;
+            height: 65px;
+            background: linear-gradient(135deg, #fff, #fff8e7);
+            border: 3px dashed var(--chocolate-dark);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transform: rotate(8deg);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .letter-content {
+            margin-top: 60px;
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1rem, 3.5vw, 1.4rem);
+            color: var(--chocolate-dark);
+            line-height: 2;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .letter-greeting {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            color: var(--chocolate-medium);
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .letter-highlight {
+            font-weight: 700;
+            color: var(--caramel);
+            font-size: 1.1em;
+        }
+
+        .letter-signature {
+            margin-top: 2rem;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            color: var(--cocoa);
+            font-style: italic;
+        }
+
+        .letter-hearts {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
+        }
+
+        /* Reasons Section - Why She's Sweet Like Chocolate */
+        .reasons-section {
+            background: linear-gradient(180deg, #f5e6d3, #fff8e7, #ffe4c9);
+            position: relative;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 500px) {
+            .reasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .reasons-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .reason-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-card:active {
+            transform: scale(0.98);
+        }
+
+        .reason-card:nth-child(1) { border-color: var(--chocolate-medium); }
+        .reason-card:nth-child(2) { border-color: var(--caramel); }
+        .reason-card:nth-child(3) { border-color: var(--chocolate-light); }
+        .reason-card:nth-child(4) { border-color: var(--chocolate-cream); }
+        .reason-card:nth-child(5) { border-color: var(--milk-chocolate); }
+        .reason-card:nth-child(6) { border-color: var(--cocoa); }
+
+        .reason-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: reasonFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
+
+        @keyframes reasonFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .reason-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--chocolate-dark);
+        }
+
+        .reason-text {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Shayari Section */
+        .shayari-section {
+            background: linear-gradient(to bottom, rgba(255, 248, 231, 0.9), rgba(245, 230, 211, 0.8));
+        }
+
+        .shayari-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .shayari-hint {
+            text-align: center;
+            color: var(--chocolate-dark);
+            margin-bottom: 2rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .shayari-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .shayari-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .shayari-card-wrapper {
+            perspective: 1500px;
+            height: 300px;
+        }
+
+        @media (min-width: 768px) {
+            .shayari-card-wrapper {
+                height: 340px;
+            }
+        }
+
+        .shayari-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.7s ease;
+            cursor: pointer;
+        }
+
+        .shayari-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .shayari-front, .shayari-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .shayari-front {
+            background: linear-gradient(135deg, var(--chocolate-medium), var(--chocolate-dark), var(--cocoa));
+            border: 3px solid rgba(198, 134, 66, 0.4);
+        }
+
+        .shayari-front-content {
+            text-align: center;
+            color: white;
+        }
+
+        .shayari-front-content .choco-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: chocoFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        .shayari-front-content .shayari-number {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .shayari-front-content .tap-hint {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-top: 0.8rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .shayari-back {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 248, 231, 0.98));
+            border: 3px solid var(--chocolate-medium);
+            transform: rotateY(180deg);
+        }
+
+        .shayari-text {
+            font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+            line-height: 1.9;
+            color: var(--chocolate-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            white-space: pre-line;
+        }
+
+        .shayari-text .highlight-name {
+            color: var(--chocolate-medium);
+            font-weight: 700;
+        }
+
+        /* Chocolate Box Section */
+        .chocolate-box-section {
+            background: linear-gradient(180deg, #ffe4c9, #f5e6d3, #fff8e7);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .chocolate-container {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .chocolate-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 3px solid rgba(198, 134, 66, 0.6);
+        }
+
+        .choco-display {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--chocolate-dark) 0deg,
+                var(--caramel) 60deg,
+                var(--chocolate-medium) 120deg,
+                var(--chocolate-cream) 180deg,
+                var(--chocolate-dark) 240deg,
+                var(--milk-chocolate) 300deg,
+                var(--chocolate-dark) 360deg
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: chocoRotate 12s linear infinite;
+            box-shadow: 0 0 40px rgba(198, 134, 66, 0.4);
+        }
+
+        @keyframes chocoRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .choco-inner {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, white, #fff8e7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: chocoRotate 12s linear infinite reverse;
+        }
+
+        .choco-emoji-large {
+            font-size: 3.5rem;
+            animation: chocoPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes chocoPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .choco-label {
+            font-size: 0.9rem;
+            color: var(--chocolate-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+
+        .chocolate-flavors {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .flavor-item {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.95rem;
+            color: var(--chocolate-dark);
+            margin-bottom: 0.6rem;
+            padding: 0.7rem 1rem;
+            background: linear-gradient(135deg, rgba(107, 62, 38, 0.08), rgba(61, 31, 13, 0.05));
+            border-radius: 12px;
+            border-left: 3px solid var(--chocolate-medium);
+        }
+
+        .chocolate-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, rgba(107, 62, 38, 0.1), rgba(61, 31, 13, 0.08));
+            padding: 1rem 0.5rem;
+            border-radius: 15px;
+            border: 2px solid rgba(107, 62, 38, 0.15);
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--chocolate-medium);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--chocolate-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Sweet Lines Section */
+        .sweetlines-section {
+            background: linear-gradient(135deg, rgba(255, 248, 231, 0.9), rgba(255, 228, 201, 0.9));
+        }
+
+        .sweetlines-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tear-pages {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+
+        @media (min-width: 500px) {
+            .tear-pages {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .tear-pages {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+        }
+
+        .tear-page {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 248, 231, 0.98) 100%);
+            box-shadow: 0 12px 35px var(--shadow);
+            padding: 1.8rem 1.2rem;
+            border-radius: 0 20px 20px 0;
+            position: relative;
+            transition: all 0.4s ease;
+            border-left: 5px solid var(--chocolate-medium);
+        }
+
+        .tear-page::after {
+            content: '🍫';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .tear-page:active {
+            transform: scale(0.98);
+        }
+
+        .tear-page-text {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            color: var(--chocolate-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        .tear-page-text .name-highlight {
+            color: var(--chocolate-medium);
+            font-weight: 700;
+        }
+
+        /* Chocolate Gift Section */
+        .chocolate-gift-section {
+            background: linear-gradient(135deg, var(--chocolate-dark), var(--chocolate-medium), var(--cocoa));
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gift-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gift-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(198, 134, 66, 0.5);
+            animation: giftPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes giftPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.9; }
+        }
+
+        .gift-choco-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .gift-choco {
+            font-size: 6rem;
+            animation: giftChocoBounce 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 40px rgba(198, 134, 66, 0.8));
+        }
+
+        @keyframes giftChocoBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        .gift-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2rem, 8vw, 4rem);
+            color: var(--chocolate-cream);
+            text-shadow: 0 0 25px rgba(212, 165, 116, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        .gift-subtitle {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: #f5e6d3;
+            line-height: 1.8;
+        }
+
+        /* Special Message Section */
+        .special-message-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #2d1b1b);
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-message-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="30" fill="%236b3e26" opacity="0.08">🍫</text></svg>');
+            background-size: 70px;
+            animation: bgFloat 40s linear infinite;
+        }
+
+        @keyframes bgFloat {
+            0% { background-position: 0 0; }
+            100% { background-position: 250px 250px; }
+        }
+
+        .special-message-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .special-message-box {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem 1.5rem;
+            border: 2px solid rgba(198, 134, 66, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .special-message-box {
+                padding: 4rem 2.5rem;
+            }
+        }
+
+        .special-message-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2rem, 7vw, 4rem);
+            color: var(--chocolate-cream);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(212, 165, 116, 0.6);
+        }
+
+        .special-message-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        .special-message-text .name-highlight {
+            color: var(--chocolate-cream);
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .special-message-emoji {
+            font-size: 3.5rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        /* Chocolate Comparison Section */
+        .comparison-section {
+            background: linear-gradient(135deg, #fff8e7, #f5e6d3);
+            padding: 3rem 1rem;
+        }
+
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 3px solid rgba(198, 134, 66, 0.6);
+            text-align: center;
+        }
+
+        .comparison-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            color: var(--chocolate-dark);
+            margin-bottom: 2rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .comparison-item {
+            padding: 1rem;
+        }
+
+        .comparison-emoji {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-label {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            color: var(--chocolate-dark);
+            font-weight: 600;
+        }
+
+        .comparison-vs {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: var(--caramel);
+        }
+
+        .comparison-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(107, 62, 38, 0.1), rgba(198, 134, 66, 0.1));
+            border-radius: 15px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.1rem;
+            color: var(--chocolate-dark);
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        .comparison-result .name-highlight {
+            color: var(--chocolate-medium);
+            font-weight: 700;
+        }
+
+        .comparison-result .winner {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            color: var(--caramel);
+        }
+
+        /* Flying Elements */
+        .flying-elements {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .flying-choco {
+            position: absolute;
+            top: -50px;
+            opacity: 0.3;
+            animation: flyDown linear infinite;
+        }
+
+        @keyframes flyDown {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateX(60px) rotate(360deg) scale(1.1);
+            }
+            95% {
+                opacity: 0.3;
+            }
+            100% {
+                top: 105%;
+                transform: translateX(-30px) rotate(720deg) scale(0.9);
+                opacity: 0;
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: scrollBounce 2s infinite;
+            z-index: 10;
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
+        }
+
+        @keyframes scrollBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-12px); }
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--chocolate-dark), var(--chocolate-medium), var(--cocoa));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+
+        .loader-choco {
+            font-size: 5rem;
+            animation: loaderPulse 1.2s ease-in-out infinite;
+            filter: drop-shadow(0 0 25px rgba(198, 134, 66, 0.7));
+        }
+
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(15deg); }
+        }
+
+        .loader-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            margin-top: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .loader-subtext {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        /* Desktop hover effects */
+        @media (min-width: 1024px) {
+            .menu-toggle:hover {
+                transform: scale(1.1) rotate(180deg);
+            }
+
+            .fullscreen-btn:hover {
+                transform: scale(1.1);
+            }
+
+            .menu-item:hover {
+                background: linear-gradient(135deg, var(--chocolate-medium), var(--chocolate-dark));
+                color: white;
+                transform: translateX(-8px);
+            }
+
+            .reason-card:hover {
+                transform: translateY(-15px) scale(1.03);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+            }
+
+            .tear-page:hover {
+                transform: translateY(-12px) translateX(10px) rotate(1deg);
+                box-shadow: 0 30px 60px var(--shadow-dark);
+            }
+
+            .love-letter:hover {
+                transform: rotateY(-3deg) rotateX(3deg);
+                box-shadow: 0 40px 70px rgba(61, 31, 13, 0.3);
+            }
+
+            .special-message-box:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 45px 80px rgba(0, 0, 0, 0.4);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-choco">🍫</div>
+            <div class="loader-text">Rohit ❤️ Daulat</div>
+            <div class="loader-subtext">मीठी सी चॉकलेट तुम्हारे लिए 💕</div>
+        </div>
+    </div>
+
+    <!-- Flying Elements -->
+    <div class="flying-elements" id="flyingElements"></div>
+
+    <!-- Floating Menu -->
+    <div class="floating-menu">
+        <div class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()">⛶</div>
+        <div class="menu-toggle" onclick="toggleMenu()">🍫</div>
+        <div class="menu-items" id="menuItems">
+            <a href="index.html" class="menu-item">🏠 Home</a>
+            <a href="a.html" class="menu-item">🌹 Rose Day</a>
+            <a href="b.html" class="menu-item">💍 Propose Day</a>
+            <a href="c.html" class="menu-item">🍫 Chocolate Day</a>
+            <a href="d.html" class="menu-item">🧸 Teddy Day</a>
+            <a href="e.html" class="menu-item">🤝 Promise Day</a>
+            <a href="f.html" class="menu-item">🤗 Hug Day</a>
+            <a href="g.html" class="menu-item">💋 Kiss Day</a>
+            <a href="h.html" class="menu-item">❤️ Valentine Day</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-animation">
+            <div class="floating-circle" style="width: 200px; height: 200px; top: 10%; left: 5%;"></div>
+            <div class="floating-circle" style="width: 150px; height: 150px; top: 50%; right: 5%; animation-delay: -5s;"></div>
+            <div class="floating-circle" style="width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: -10s;"></div>
+        </div>
+
+        <!-- Side Chocolates -->
+        <div class="side-choco left">🍫</div>
+        <div class="side-choco right">🍫</div>
+        <div class="side-choco top-left">🍬</div>
+        <div class="side-choco top-right">✨</div>
+
+        <!-- Sparkles -->
+        <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 30%; right: 20%; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 45%; right: 15%; animation-delay: 1.5s;"></div>
+
+        <div class="hero-content">
+            <div class="couple-names">
+                <span class="name-rohit">❤️ Rohit</span>
+                <span class="loves">🍫</span>
+                <span class="name-daulat">Daulat ❤️</span>
+            </div>
+            
+            <!-- Title with visible chocolates -->
+            <div class="hero-title">
+                <span class="choco-emoji">🍫</span>
+                <span class="title-text">Happy Chocolate Day</span>
+                <span class="choco-emoji">🍫</span>
+            </div>
+            
+            <div class="hindi-subtitle">तुम मेरी ज़िंदगी की सबसे मीठी चॉकलेट हो 💕</div>
+            <p class="date">9 February 2025 🍫</p>
+        </div>
+        <div class="hero-choco-3d">🍫</div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Love Letter Section -->
+    <section class="content-section love-letter-section">
+        <h2 class="section-title">💌 दौलत के नाम — मीठा सा खत 💌</h2>
+        <div class="love-letter-container">
+            <div class="love-letter">
+                <div class="letter-seal">🍫</div>
+                <div class="letter-stamp">🍬</div>
+                <div class="letter-content">
+                    <div class="letter-greeting">मेरी प्यारी दौलत ❤️🍫</div>
+                    <p>
+                        दुनिया की सबसे महंगी चॉकलेट भी तुम्हारी मिठास के सामने फीकी लगती है।
+                        तुम मेरी ज़िन्दगी में वो स्वाद हो जो हर दिन को खास बना देता है।
+                        <br><br>
+                        जैसे चॉकलेट दिल को खुश कर देती है,
+                        वैसे ही तुम्हारी मुस्कान मेरे पूरे दिन को खूबसूरत बना देती है।
+                        <br><br>
+                        तुम्हारे बिना जिंदगी कुछ अधूरी सी लगती है,
+                        और तुम्हारे साथ हर पल मीठा, सुकून भरा और यादगार हो जाता है।
+                        <br><br>
+                        इस Chocolate Day पर मैं तुम्हें सिर्फ चॉकलेट नहीं —
+                        <br>
+                        <span class="letter-highlight">अपना पूरा प्यार दे रहा हूँ। 🍫💕</span>
+                        <br><br>
+                        हमेशा ऐसे ही मुस्कुराती रहना,
+                        क्योंकि तुम्हारी मुस्कान ही मेरी सबसे बड़ी मिठास है। 💖
+                    </p>
+                    <div class="letter-signature">~ हमेशा तुम्हारा, रोहित 🍫</div>
+                </div>
+                <div class="letter-hearts">💕 🍫 💕</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons Section - Why She's Sweet Like Chocolate -->
+    <section class="content-section reasons-section">
+        <h2 class="section-title">🍫 तुम चॉकलेट जैसी क्यों हो 🍫</h2>
+        <div class="reasons-grid">
+            
+            <div class="reason-card">
+                <span class="reason-emoji">🍫</span>
+                <div class="reason-title">सबसे मीठी</div>
+                <div class="reason-text">तुम्हारी बातें और तुम्हारा प्यार — दोनों दिल को मीठा सुकून देते हैं।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">😊</span>
+                <div class="reason-title">मूड ठीक कर देती हो</div>
+                <div class="reason-text">तुम्हारी एक मुस्कान सारे ग़म भुला देती है।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">💖</span>
+                <div class="reason-title">दिल में बस गई हो</div>
+                <div class="reason-text">जैसे चॉकलेट मुंह में घुलती है, वैसे तुम दिल में घुल गई हो।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">✨</span>
+                <div class="reason-title">हमेशा खास</div>
+                <div class="reason-text">तुम सिर्फ खास नहीं — मेरे लिए सबसे precious हो।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">🤗</span>
+                <div class="reason-title">Comfort देती हो</div>
+                <div class="reason-text">तुम्हारा साथ हर मुश्किल को आसान बना देता है।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">❤️</span>
+                <div class="reason-title">Addictive हो</div>
+                <div class="reason-text">तुमसे प्यार हो गया है — अब दूर रहना नामुमकिन है।</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Chocolate Comparison Section -->
+    <section class="content-section comparison-section">
+        <div class="comparison-container">
+            <div class="comparison-card">
+                <div class="comparison-title">🍫 चॉकलेट vs दौलत 🍫</div>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-emoji">🍫</div>
+                        <div class="comparison-label">चॉकलेट</div>
+                    </div>
+                    <div class="comparison-vs">vs</div>
+                    <div class="comparison-item">
+                        <div class="comparison-emoji">👸</div>
+                        <div class="comparison-label">दौलत</div>
+                    </div>
+                </div>
+                <div class="comparison-result">
+                    चॉकलेट खाने से खुशी मिलती है… 🍫<br>
+                    लेकिन तुम्हें देखकर दिल सच में खुश हो जाता है। 💕<br><br>
+                    चॉकलेट मिठास देती है,<br>
+                    पर तुम जिंदगी को मीठा बना देती हो।
+                    <span class="winner">Winner हमेशा — दौलत ❤️👑</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shayari Section -->
+    <section class="content-section shayari-section">
+        <div class="shayari-container">
+            <h2 class="section-title">🍬 चॉकलेटी शायरी 🍬</h2>
+            <p class="shayari-hint">✨ कार्ड पर टैप करो शायरी पढ़ने के लिए ✨</p>
+            <div class="shayari-grid">
+                
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="choco-icon">🍫</span>
+                                <div class="shayari-number">शायरी #1</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">चॉकलेट सी मीठी है तेरी हर बात,
+तेरे साथ खूबसूरत है हर रात।
+<span class="highlight-name">दौलत</span>, तू साथ रहे हमेशा,
+बस यही मेरी हर ख्वाहिश की शुरुआत। 🍫</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="choco-icon">🍫</span>
+                                <div class="shayari-number">शायरी #2</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">दुनिया की हर मिठास तेरे आगे कम है,
+तू है तो हर मौसम में बसंत है।
+<span class="highlight-name">दौलत</span>, तू ही मेरी Sweet Story है,
+तू ही मेरा सबसे प्यारा Moment है। 💕</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="choco-icon">🍫</span>
+                                <div class="shayari-number">शायरी #3</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">तेरी यादें चॉकलेट सी घुल जाती हैं,
+दिल को सुकून दे जाती हैं।
+<span class="highlight-name">दौलत</span>, तू साथ हो तो,
+जिंदगी खुद ही मुस्कुरा जाती है। ✨</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="choco-icon">🍫</span>
+                                <div class="shayari-number">शायरी #4</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">चॉकलेट तो बस बहाना है,
+असल में तुझे मुस्कुराना है।
+मेरे दिल में सिर्फ तू है,
+और हमेशा तुझे ही बसाना है। 💖</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="choco-icon">🍫</span>
+                                <div class="shayari-number">शायरी #5</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">कोई Dairy Milk, कोई Ferrero नहीं,
+तुझसे Sweet कोई Hero नहीं।
+<span class="highlight-name">दौलत</span>, तू Limited Edition है,
+मेरे दिल की सबसे Perfect Choice। 🌟</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="choco-icon">🍫</span>
+                                <div class="shayari-number">शायरी #6</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">मुंह में घुलती चॉकलेट जैसे,
+दिल में बसी हो तुम वैसे।
+<span class="highlight-name">दौलत</span>, मेरी सबसे मीठी खुशी,
+बस तुम ही हो हमेशा से। 🍫</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Chocolate Box Section -->
+    <section class="chocolate-box-section">
+        <div class="chocolate-container">
+            <h2 class="section-title">🍬 Special Chocolate Box — सिर्फ तुम्हारे लिए 🍬</h2>
+            <div class="chocolate-box">
+                <div class="choco-display">
+                    <div class="choco-inner">
+                        <div class="choco-emoji-large">🍫</div>
+                        <div class="choco-label">Sweet Love</div>
+                    </div>
+                </div>
+                
+                <div class="chocolate-flavors">
+                    <div class="flavor-item">🍫 Dark Chocolate — तुम्हारी गहरी आँखों जैसी।</div>
+                    <div class="flavor-item">🥛 Milk Chocolate — तुम्हारी मुस्कान जैसी मीठी।</div>
+                    <div class="flavor-item">🍓 Strawberry Chocolate — तुम्हारे गालों जैसी प्यारी।</div>
+                    <div class="flavor-item">🌰 Hazelnut Chocolate — तुम्हारी बातों जैसी दिलचस्प।</div>
+                    <div class="flavor-item">💝 Heart Chocolate — सिर्फ तुम्हारे लिए बनी।</div>
+                </div>
+
+                <div class="chocolate-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">🍫</div>
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">Sweetness</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">💕</div>
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Pure Love</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">💖</div>
+                        <div class="stat-value">Forever</div>
+                        <div class="stat-label">Together</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sweet Lines Section -->
+    <section class="content-section sweetlines-section">
+        <div class="sweetlines-container">
+            <h2 class="section-title">💕 मीठी-मीठी बातें 💕</h2>
+            <div class="tear-pages">
+                
+                <div class="tear-page">
+                    <div class="tear-page-text">🍫 तुम मेरी favorite मिठास हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">💕 तुम्हारे साथ हर दिन Chocolate Day लगता है।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">✨ मेरी जिंदगी की सबसे Sweet Habit तुम हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">💖 तुम बिना जिंदगी फीकी लगती है।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">🍬 तुम मेरी खुशी का सबसे मीठा कारण हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">🌟 तुम सच में मेरी सबसे अनमोल <span class="name-highlight">दौलत</span> हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">🍫 चॉकलेट खुशी देती है, तुम सुकून देती हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">❤️ तुम मेरी जिंदगी की Sweetest Surprise हो।</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Chocolate Gift Section -->
+    <section class="chocolate-gift-section">
+        <div class="gift-container">
+            <div class="gift-title">🍫 A Sweet Gift For You 🍫</div>
+            <div class="gift-choco-container">
+                <div class="gift-choco">🍫</div>
+            </div>
+            <div class="gift-name">दौलत ❤️</div>
+            <div class="gift-subtitle">
+                ये चॉकलेट तुम्हारे लिए है,
+                <br>
+                लेकिन सच कहूँ तो —
+                <br>
+                मेरी जिंदगी का सबसे खूबसूरत Gift तुम हो।
+                <br><br>
+                हमेशा ऐसे ही Sweet, प्यारी और मुस्कुराती रहना। 💕
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Message Section -->
+    <section class="special-message-section">
+        <div class="special-message-container">
+            <div class="special-message-box">
+                <h2 class="special-message-title">🍫 दौलत के लिए खास मैसेज 🍫</h2>
+                <p class="special-message-text">
+                    मेरी प्यारी <span class="name-highlight">दौलत</span>,
+                    <br><br>
+                    आज Chocolate Day है, लेकिन मेरे लिए हर दिन तब खास बन जाता है जब तुम साथ होती हो।
+                    <br><br>
+                    चॉकलेट मिठास देती है,
+                    <br>
+                    पर तुम जिंदगी को खुशियों से भर देती हो।
+                    <br><br>
+                    तुम्हारी मुस्कान, तुम्हारा साथ, तुम्हारा प्यार —
+                    <br>
+                    ये सब मेरी जिंदगी की सबसे मीठी चीज़ हैं।
+                    <br><br>
+                    बस हमेशा मेरे साथ रहना…
+                    <br>
+                    क्योंकि तुम ही मेरी असली मिठास हो।
+                    <br><br>
+                    <strong>Happy Chocolate Day, मेरी जान ❤️🍫</strong>
+                </p>
+                <div class="special-message-emoji">🍫💕🍫</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Hide loader after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 2000);
+            
+            createFlyingElements();
+        });
+
+        // Menu toggle
+        function toggleMenu() {
+            document.getElementById('menuItems').classList.toggle('active');
+        }
+
+        document.addEventListener('click', (e) => {
+            const menu = document.querySelector('.floating-menu');
+            if (!menu.contains(e.target)) {
+                document.getElementById('menuItems').classList.remove('active');
+            }
+        });
+
+        // Fullscreen toggle
+        function toggleFullscreen() {
+            const btn = document.getElementById('fullscreenBtn');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().then(() => {
+                    btn.textContent = '✕';
+                }).catch(err => {
+                    console.log('Fullscreen error:', err);
+                });
+            } else {
+                document.exitFullscreen().then(() => {
+                    btn.textContent = '⛶';
+                });
+            }
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            const btn = document.getElementById('fullscreenBtn');
+            btn.textContent = document.fullscreenElement ? '✕' : '⛶';
+        });
+
+        // Flying chocolates and sweets
+        function createFlyingElements() {
+            const container = document.getElementById('flyingElements');
+            const items = ['🍫', '🍬', '🍭', '✨', '💕', '💖', '🧁', '🍩'];
+            const isMobile = window.innerWidth < 768;
+            const interval = isMobile ? 2500 : 1500;
+            
+            setInterval(() => {
+                const element = document.createElement('div');
+                element.className = 'flying-choco';
+                element.textContent = items[Math.floor(Math.random() * items.length)];
+                element.style.left = Math.random() * 100 + '%';
+                element.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+                
+                const duration = Math.random() * 10 + 15;
+                element.style.animationDuration = duration + 's';
+                element.style.opacity = Math.random() * 0.2 + 0.15;
+                
+                container.appendChild(element);
+                
+                setTimeout(() => element.remove(), duration * 1000 + 1000);
+            }, interval);
+        }
+    </script>
+</body>
+</html>
