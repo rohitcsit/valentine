@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohit ❤️ Daulat - Our Love Story</title>
+    <title>Our Love Story ❤️</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Satisfy&family=Pacifico&family=Lobster&family=Sacramento&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -38,7 +38,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Floating Love Elements - More Transparent */
+        /* Floating Love Elements */
         .floating-elements {
             position: fixed;
             top: 0;
@@ -53,9 +53,9 @@
         .floating-item {
             position: absolute;
             font-size: 1.5rem;
-            opacity: 0.12;
+            opacity: 0.25;
             animation: floatUp linear infinite;
-            filter: drop-shadow(0 0 2px rgba(255, 23, 68, 0.2));
+            filter: drop-shadow(0 0 3px rgba(255, 23, 68, 0.3));
         }
 
         @keyframes floatUp {
@@ -64,10 +64,10 @@
                 opacity: 0;
             }
             10% {
-                opacity: 0.12;
+                opacity: 0.25;
             }
             90% {
-                opacity: 0.12;
+                opacity: 0.25;
             }
             100% {
                 transform: translateY(-100px) rotate(360deg) scale(0.5);
@@ -102,7 +102,7 @@
             }
         }
 
-        /* Background Particles - More Transparent */
+        /* Background Particles */
         .background-particles {
             position: fixed;
             top: 0;
@@ -120,7 +120,7 @@
             height: 4px;
             background: radial-gradient(circle, var(--pink-light), transparent);
             border-radius: 50%;
-            opacity: 0.2;
+            opacity: 0.4;
             animation: float-particle linear infinite;
         }
 
@@ -129,8 +129,8 @@
                 transform: translateY(0) translateX(0);
                 opacity: 0;
             }
-            10% { opacity: 0.2; }
-            90% { opacity: 0.2; }
+            10% { opacity: 0.4; }
+            90% { opacity: 0.4; }
             100% {
                 transform: translateY(-100vh) translateX(100px);
                 opacity: 0;
@@ -165,25 +165,24 @@
             animation: heroFadeIn 1.5s ease;
         }
 
-        /* ROHIT - Left Top - Extra Large and Bold */
+        /* ROHIT - Left Top - Stylish and Bold - INCREASED SIZE */
         .name-boy {
             position: absolute;
-            top: 5%;
+            top: 6%;
             left: 3%;
             font-family: 'Bebas Neue', 'Playfair Display', serif;
-            font-size: clamp(5rem, 25vw, 20rem);
+            font-size: clamp(12rem, 15vw, 15rem);
             font-weight: 900;
             color: white;
             text-transform: uppercase;
-            letter-spacing: 12px;
+            letter-spacing: 10px;
             text-shadow: 
-                6px 6px 0px rgba(0, 0, 0, 0.4),
-                12px 12px 0px rgba(255, 23, 68, 0.4),
-                0 0 80px rgba(255, 23, 68, 0.9),
-                0 0 150px rgba(255, 23, 68, 0.6);
+                5px 5px 0px rgba(0, 0, 0, 0.3),
+                10px 10px 0px rgba(255, 23, 68, 0.3),
+                0 0 80px rgba(255, 23, 68, 0.8),
+                0 0 150px rgba(255, 23, 68, 0.5);
             animation: nameGlowBoy 3s ease infinite;
-            -webkit-text-stroke: 3px rgba(255, 255, 255, 0.4);
-            line-height: 0.9;
+            -webkit-text-stroke: 3px rgba(255, 255, 255, 0.3);
         }
 
         .name-boy::after {
@@ -197,26 +196,25 @@
             border-radius: 3px;
         }
 
-        /* DAULAT - Bottom Right - Extra Large and Bold */
+        /* DAULAT - Bottom Right - Stylish and Bold - INCREASED SIZE */
         .name-girl {
             position: absolute;
-            bottom: 5%;
+            bottom: 6%;
             right: 3%;
             font-family: 'Bebas Neue', 'Playfair Display', serif;
-            font-size: clamp(5rem, 25vw, 20rem);
+            font-size: clamp(12rem, 15vw, 15rem);
             font-weight: 900;
             color: white;
             text-transform: uppercase;
-            letter-spacing: 12px;
+            letter-spacing: 10px;
             text-shadow: 
-                6px 6px 0px rgba(0, 0, 0, 0.4),
-                12px 12px 0px rgba(255, 105, 180, 0.4),
-                0 0 80px rgba(255, 182, 193, 0.9),
-                0 0 150px rgba(255, 182, 193, 0.6);
+                5px 5px 0px rgba(0, 0, 0, 0.3),
+                10px 10px 0px rgba(255, 105, 180, 0.3),
+                0 0 80px rgba(255, 182, 193, 0.8),
+                0 0 150px rgba(255, 182, 193, 0.5);
             animation: nameGlowGirl 3s ease infinite;
-            -webkit-text-stroke: 3px rgba(255, 255, 255, 0.4);
+            -webkit-text-stroke: 3px rgba(255, 255, 255, 0.3);
             text-align: right;
-            line-height: 0.9;
         }
 
         .name-girl::after {
@@ -233,18 +231,18 @@
         @keyframes nameGlowBoy {
             0%, 100% {
                 text-shadow: 
-                    6px 6px 0px rgba(0, 0, 0, 0.4),
-                    12px 12px 0px rgba(255, 23, 68, 0.4),
-                    0 0 80px rgba(255, 23, 68, 0.7),
-                    0 0 150px rgba(255, 23, 68, 0.5);
+                    5px 5px 0px rgba(0, 0, 0, 0.3),
+                    10px 10px 0px rgba(255, 23, 68, 0.3),
+                    0 0 80px rgba(255, 23, 68, 0.6),
+                    0 0 150px rgba(255, 23, 68, 0.4);
                 transform: scale(1);
             }
             50% {
                 text-shadow: 
-                    6px 6px 0px rgba(0, 0, 0, 0.4),
-                    12px 12px 0px rgba(255, 23, 68, 0.5),
-                    0 0 120px rgba(255, 23, 68, 1),
-                    0 0 200px rgba(255, 23, 68, 0.7);
+                    5px 5px 0px rgba(0, 0, 0, 0.3),
+                    10px 10px 0px rgba(255, 23, 68, 0.4),
+                    0 0 120px rgba(255, 23, 68, 0.9),
+                    0 0 200px rgba(255, 23, 68, 0.6);
                 transform: scale(1.02);
             }
         }
@@ -252,18 +250,18 @@
         @keyframes nameGlowGirl {
             0%, 100% {
                 text-shadow: 
-                    6px 6px 0px rgba(0, 0, 0, 0.4),
-                    12px 12px 0px rgba(255, 105, 180, 0.4),
-                    0 0 80px rgba(255, 182, 193, 0.7),
-                    0 0 150px rgba(255, 182, 193, 0.5);
+                    5px 5px 0px rgba(0, 0, 0, 0.3),
+                    10px 10px 0px rgba(255, 105, 180, 0.3),
+                    0 0 80px rgba(255, 182, 193, 0.6),
+                    0 0 150px rgba(255, 182, 193, 0.4);
                 transform: scale(1);
             }
             50% {
                 text-shadow: 
-                    6px 6px 0px rgba(0, 0, 0, 0.4),
-                    12px 12px 0px rgba(255, 105, 180, 0.5),
-                    0 0 120px rgba(255, 182, 193, 1),
-                    0 0 200px rgba(255, 182, 193, 0.7);
+                    5px 5px 0px rgba(0, 0, 0, 0.3),
+                    10px 10px 0px rgba(255, 105, 180, 0.4),
+                    0 0 120px rgba(255, 182, 193, 0.9),
+                    0 0 200px rgba(255, 182, 193, 0.6);
                 transform: scale(1.02);
             }
         }
@@ -281,10 +279,10 @@
         }
 
         .heart-icon {
-            font-size: clamp(3rem, 10vw, 6rem);
+            font-size: clamp(2.5rem, 8vw, 5rem);
             animation: heartPulse 1s infinite;
             color: var(--rose-red);
-            filter: drop-shadow(0 0 30px var(--rose-red));
+            filter: drop-shadow(0 0 25px var(--rose-red));
         }
 
         @keyframes heartPulse {
@@ -297,29 +295,29 @@
 
         .loves-text {
             font-family: 'Lobster', cursive;
-            font-size: clamp(3rem, 12vw, 8rem);
+            font-size: clamp(2.5rem, 10vw, 6rem);
             background: linear-gradient(135deg, var(--gold), #fff, var(--gold), #fff);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.7));
-            letter-spacing: 10px;
+            filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.6));
+            letter-spacing: 8px;
             animation: lovesShine 4s ease infinite;
         }
 
         @keyframes lovesShine {
             0% { 
                 background-position: 0% 50%;
-                filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.7)) brightness(1);
+                filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.6)) brightness(1);
             }
             50% { 
                 background-position: 100% 50%;
-                filter: drop-shadow(4px 4px 12px rgba(255,215,0,0.9)) brightness(1.4);
+                filter: drop-shadow(3px 3px 10px rgba(255,215,0,0.8)) brightness(1.3);
             }
             100% { 
                 background-position: 0% 50%;
-                filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.7)) brightness(1);
+                filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.6)) brightness(1);
             }
         }
 
@@ -624,12 +622,14 @@
             right: 10px;
             background: linear-gradient(135deg, var(--rose-red), var(--pink-dark));
             color: white;
-            padding: 0.4rem 1rem;
+            padding: 0.4rem 0.8rem;
             border-radius: 20px;
             font-family: 'Playfair Display', serif;
-            font-weight: 900;
-            font-size: 1rem;
+            font-weight: 700;
+            font-size: 0.75rem;
             box-shadow: 0 4px 15px rgba(255, 23, 68, 0.5);
+            text-align: center;
+            line-height: 1.2;
         }
 
         .timeline-info {
@@ -918,7 +918,7 @@
             50% { transform: translateX(-50%) translateY(-10px) rotate(5deg); }
         }
 
-        /* Dreams Section - 10 Cards */
+        /* Dreams Section */
         .dreams-section {
             padding: 3rem 1rem;
             background: linear-gradient(to bottom, rgba(243, 229, 245, 0.8), rgba(230, 190, 255, 0.6));
@@ -1205,35 +1205,6 @@
             }
         }
 
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, var(--pink-dark), var(--rose-red));
-            color: white;
-            text-align: center;
-            padding: 2rem 1rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .footer-heart {
-            font-size: 3rem;
-            animation: heartPulse 1s infinite;
-            display: block;
-            margin-bottom: 1rem;
-        }
-
-        .footer-text {
-            font-family: 'Dancing Script', cursive;
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-names {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 2rem;
-            letter-spacing: 5px;
-        }
-
         /* Mobile Timeline */
         @media (max-width: 768px) {
             .timeline-line {
@@ -1274,25 +1245,17 @@
             }
 
             .name-boy {
-                top: 8%;
+                top: 10%;
                 left: 5%;
-                font-size: clamp(4rem, 20vw, 8rem);
-                letter-spacing: 6px;
+                font-size: clamp(3.5rem, 20vw, 8rem);
+                letter-spacing: 5px;
             }
 
             .name-girl {
-                bottom: 8%;
+                bottom: 10%;
                 right: 5%;
-                font-size: clamp(4rem, 20vw, 8rem);
-                letter-spacing: 6px;
-            }
-
-            .loves-text {
-                font-size: clamp(2.5rem, 10vw, 5rem);
-            }
-
-            .heart-icon {
-                font-size: clamp(2.5rem, 8vw, 4rem);
+                font-size: clamp(3.5rem, 20vw, 8rem);
+                letter-spacing: 5px;
             }
         }
 
@@ -1382,14 +1345,6 @@
             .love-letter:hover {
                 transform: rotate(0deg) scale(1.02);
             }
-
-            .name-boy {
-                font-size: clamp(6rem, 22vw, 18rem);
-            }
-
-            .name-girl {
-                font-size: clamp(6rem, 22vw, 18rem);
-            }
         }
     </style>
 </head>
@@ -1425,7 +1380,7 @@
     </section>
 
     <section class="timeline-section">
-        <h2 class="section-title">✨ हमारे सपनों का सफर ✨</h2>
+        <h2 class="section-title">✨सपनों का सफर✨</h2>
         <div class="timeline-container">
             <div class="timeline-line"></div>
             <div class="love-path-timeline" id="timeline"></div>
@@ -1433,238 +1388,115 @@
     </section>
 
     <section class="love-notes-section">
-        <h2 class="section-title">💌 Daulat के लिए शायरी 💌</h2>
+        <h2 class="section-title">💌 प्यार भरे नोट्स 💌</h2>
         <div class="notes-grid" id="notesGrid"></div>
     </section>
 
     <section class="love-letter-section">
-        <h2 class="section-title">💝 Daulat के नाम खत 💝</h2>
+        <h2 class="section-title">💝 Love Letter 💝</h2>
         <div class="letter-container">
             <div class="envelope-decoration">💌</div>
             <div class="love-letter" id="loveLetter">
                 <div class="letter-stamp">💕</div>
-                <div class="letter-date" id="letterDate">February, 2026</div>
-                <div class="letter-greeting" id="letterGreeting">मेरी जान Daulat,</div>
+                <div class="letter-date" id="letterDate">14 February 2024</div>
+                <div class="letter-greeting" id="letterGreeting">मेरी प्यारी Daulat,</div>
                 <div class="letter-body" id="letterBody"></div>
-                <div class="letter-closing">हमेशा तुम्हारा,</div>
+                <div class="letter-closing">तुम्हारा,</div>
                 <div class="letter-signature" id="letterSignature">Rohit 💝</div>
                 <div class="letter-hearts">💕💕💕</div>
-                <div class="letter-lipstick">💋</div>
+                <div class="letter-lipstick">💄</div>
             </div>
         </div>
     </section>
 
     <section class="dreams-section">
-        <h2 class="section-title">🌟 Daulat के साथ सपने 🌟</h2>
+        <h2 class="section-title">🌟 हमारे सपने 🌟</h2>
         <div class="dreams-grid" id="dreamsGrid"></div>
     </section>
 
     <section class="together-section">
-        <h2 class="section-title">💑 Daulat के साथ करेंगे 💑</h2>
+        <h2 class="section-title">💑 साथ में करेंगे 💑</h2>
         <div class="together-grid" id="togetherGrid"></div>
     </section>
 
     <section class="promise-section">
-        <h2 class="section-title">🤝 Daulat से वादे 🤝</h2>
+        <h2 class="section-title">🤝 हमारे Promise 🤝</h2>
         <div class="promise-grid" id="promiseGrid"></div>
     </section>
-
-    <footer class="footer">
-        <span class="footer-heart">💖</span>
-        <div class="footer-text">Forever & Always</div>
-        <div class="footer-names">ROHIT ❤️ DAULAT</div>
-    </footer>
 
     <script>
         const jsonData = {
             couple: {
                 boyName: "ROHIT",
                 girlName: "DAULAT",
-                relationshipStart: "2016-01-01"
+                relationshipStart: "2020-01-15"
             },
             loveLetter: {
-                date: "February, 2026",
-                greeting: "मेरी जान Daulat,",
+                date: "14 February 2024",
+                greeting: "मेरी प्यारी Daulat,",
                 body: [
-                    "जब से तुम्हें देखा है, मेरी दुनिया बदल गई। तुम्हारी वो प्यारी सी मुस्कान, वो नज़रें जो मेरे दिल को छू जाती हैं, सब कुछ मेरे अंदर बस गया है।",
-                    "Daulat, तुम मेरी ज़िन्दगी की सबसे खूबसूरत चुनाव हो। तुम्हारे साथ हर पल एक खूबसूरत सपना है जो सच हो रहा है।",
-                    "मैं वादा करता हूँ कि हमेशा तुम्हारा साथ दूंगा, हर मुश्किल में तुम्हारे पीछे खड़ा रहूंगा, और तुम्हें दुनिया की हर खुशी दूंगा।",
-                    "तुम मेरी धड़कन हो, मेरी साँस हो, मेरा सब कुछ हो। Daulat, तुमसे बेहद प्यार करता हूँ! ❤️ Forever Yours!"
+                    "जब पहली बार तुम्हें देखा था, तभी समझ गया था कि तुम मेरी जिंदगी की सबसे खूबसूरत कहानी बनने वाली हो। तुम्हारी मुस्कान, तुम्हारी बातें — सब कुछ मेरे दिल में बस गया।",
+                    "तुम्हारे साथ बिताया हर पल मुझे ये एहसास दिलाता है कि सच्चा प्यार कैसा होता है। तुम सिर्फ मेरी मोहब्बत नहीं, मेरी ताकत, मेरी खुशी और मेरी पूरी दुनिया हो।",
+                    "मैं वादा करता हूँ — हर खुशी में, हर मुश्किल में, हर मोड़ पर तुम्हारा हाथ कभी नहीं छोड़ूंगा। तुम मेरी धड़कन हो, मेरी साँस हो, मेरा सब कुछ हो।",
+                    "I Love You Forever ❤️"
                 ],
                 closing: "तुम्हारा,",
                 signature: "Rohit 💝"
             },
             timeline: [
-                { 
-                    title: "School Days", 
-                    year: "2016", 
-                    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=600", 
-                    description: "जहाँ Daulat से पहली मुलाकात हुई 💫", 
-                    icon: "🏫" 
-                },
-                { 
-                    title: "Best Friends Forever", 
-                    year: "2025", 
-                    image: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=600", 
-                    description: "Daulat मेरी सबसे खास दोस्त बनी ⭐", 
-                    icon: "🤝" 
-                },
-                { 
-                    title: "Couple Goals", 
-                    year: "2026", 
-                    image: "https://images.unsplash.com/photo-1518568814500-bf0f8d125f46?q=80&w=600", 
-                    description: "प्यार का इज़हार - Daulat मेरी बनी 💕", 
-                    icon: "💕" 
-                },
-                { 
-                    title: "Dreams Working", 
-                    year: "2027", 
-                    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=600", 
-                    description: "साथ मिलकर सपनों को पूरा कर रहे हैं 🎓", 
-                    icon: "🎓" 
-                },
-                { 
-                    title: "Marriage", 
-                    year: "2028", 
-                    image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600", 
-                    description: "Daulat के साथ 7 जन्मों का बंधन 💒", 
-                    icon: "💒" 
-                },
-                { 
-                    title: "World Tour", 
-                    year: "2028-30", 
-                    image: "https://images.unsplash.com/photo-1488085061387-422e29b40080?q=80&w=600", 
-                    description: "Daulat के साथ पूरी दुनिया घूमेंगे ✈️", 
-                    icon: "✈️" 
-                },
-                { 
-                    title: "Happy Family", 
-                    year: "2030", 
-                    image: "https://images.unsplash.com/photo-1511895426328-dc8714191300?q=80&w=600", 
-                    description: "Daulat के साथ प्यारा परिवार 👨‍👩‍👧‍👦", 
-                    icon: "👨‍👩‍👧" 
-                },
-                { 
-                    title: "Growing Old Together", 
-                    year: "2070", 
-                    image: "https://images.unsplash.com/photo-1521791055366-0d553872125f?q=80&w=600", 
-                    description: "Daulat के साथ खूबसूरत बुढ़ापा 👴👵💕", 
-                    icon: "👴👵" 
-                }
+                { title: "School", year: "January 2015", image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?q=80&w=600", description: "यहीं से हमारी कहानी शुरू हुई, मासूमियत और पहली पहचान के साथ।", icon: "🏫" },
+                { title: "Friend", year: "March 2016", image: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?q=80&w=600", description: "दोस्ती की नींव रखी, बातें बढ़ीं और रिश्ता खास बनने लगा।", icon: "🤝" },
+                { title: "Best Friend", year: "July 2018", image: "https://images.unsplash.com/photo-1543807535-eceef0bc6599?q=80&w=600", description: "अब हम सिर्फ दोस्त नहीं, एक-दूसरे की सबसे बड़ी ताकत बन गए।", icon: "⭐" },
+                { title: "Couple", year: "February 2020", image: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=600", description: "दिल ने दिल को पहचाना, और प्यार ने अपना रास्ता बना लिया।", icon: "💕" },
+                { title: "Dream Achievement", year: "May 2023", image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=600", description: "सपनों को साथ मिलकर हकीकत में बदलने की शुरुआत।", icon: "🎓" },
+                { title: "Marriage", year: "December 2025", image: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=600", description: "दो दिलों का हमेशा के लिए एक होने का खूबसूरत फैसला।", icon: "💒" },
+                { title: "Travel", year: "February 2026", image: "https://images.unsplash.com/photo-1530789253388-582c481c54b0?q=80&w=600", description: "हाथों में हाथ डालकर दुनिया की खूबसूरती साथ देखेंगे।", icon: "✈️" },
+                { title: "Kids", year: "August 2028", image: "https://images.unsplash.com/photo-1555252333-9f8e92e65df9?q=80&w=600", description: "हमारी मोहब्बत का सबसे प्यारा तोहफा।", icon: "👶" },
+                { title: "Parents", year: "January 2030", image: "https://images.unsplash.com/photo-1609220136736-443140cffec6?q=80&w=600", description: "जिम्मेदारियों के साथ खुशियों से भरा नया सफर।", icon: "👨‍👩‍👧" },
+                { title: "Old", year: "Forever 2070", image: "https://images.unsplash.com/photo-1516733968668-dbdce39c0651?q=80&w=600", description: "उम्र ढलेगी, पर प्यार कभी कम नहीं होगा।", icon: "👴👵" }
             ],
             loveNotes: [
-                { 
-                    icon: "💕", 
-                    title: "Daulat की मुस्कान", 
-                    text: "तेरी मुस्कान में जादू है Daulat,\nमेरा दिल बस तुझ पर फ़िदा है,\nतू हँसे तो लगे मुझे,\nये दुनिया कितनी हसीन है! 💫" 
-                },
-                { 
-                    icon: "🌟", 
-                    title: "तू मेरी जान है", 
-                    text: "Daulat तू मेरी जान है,\nतेरे बिना सब वीरान है,\nतू ही मेरी मंज़िल है,\nतू ही मेरा आसमान है! ⭐" 
-                },
-                { 
-                    icon: "💖", 
-                    title: "दिल की बात", 
-                    text: "दिल में बसी है Daulat मेरी,\nवो है मेरी हर खुशी,\nजब से मिली है वो मुझे,\nज़िन्दगी लगे है खूबसूरती! 💝" 
-                },
-                { 
-                    icon: "🌹", 
-                    title: "गुलाब सी Daulat", 
-                    text: "गुलाब से भी खूबसूरत है Daulat,\nउसकी खुशबू मेरी साँसों में बसी,\nउसके बिना ज़िन्दगी अधूरी,\nवो है मेरी दौलत असली! 🌺" 
-                },
-                { 
-                    icon: "💝", 
-                    title: "हमेशा साथ", 
-                    text: "Daulat तेरा साथ हो बस,\nऔर कुछ न चाहिए,\nतेरे संग बूढ़ा होना है,\nये ही मेरी चाहत है! 💑" 
-                },
-                { 
-                    icon: "✨", 
-                    title: "मेरी रानी", 
-                    text: "Daulat तू मेरी रानी है,\nतेरे बिना ज़िन्दगी सूनी है,\nतेरी एक झलक के लिए,\nये दीवाना हर पल तड़पता है! 👑" 
-                },
-                { 
-                    icon: "🎀", 
-                    title: "प्यार का एहसास", 
-                    text: "Daulat तेरे प्यार का एहसास,\nहर पल मुझे छू जाता है,\nतेरे बिना जीना मुश्किल,\nये दिल तुझे ही पुकारता है! 💗" 
-                },
-                { 
-                    icon: "💗", 
-                    title: "मेरी धड़कन", 
-                    text: "Daulat तू मेरी धड़कन है,\nतू मेरी हर साँस है,\nतेरे बिना ये ज़िन्दगी,\nबस अधूरी आस है! 💓" 
-                },
-                { 
-                    icon: "🌺", 
-                    title: "जन्नत सी Daulat", 
-                    text: "तेरे साथ है जन्नत Daulat,\nतू है मेरी क़िस्मत,\nहर जन्म में तुझे पाना है,\nये है मेरी मोहब्बत! 🏵️" 
-                }
+                { icon: "💕", title: "तुम्हारी मुस्कान", text: "तुम्हारी मुस्कान मेरी हर थकान मिटा देती है, जैसे सुबह की पहली किरण।" },
+                { icon: "🌟", title: "खास पल", text: "तुम्हारे साथ बिताया हर पल मेरी जिंदगी का सबसे कीमती हिस्सा है।" },
+                { icon: "💖", title: "मेरा प्यार", text: "मेरा प्यार तुम्हारे लिए गहरा, सच्चा और हमेशा रहने वाला है।" },
+                { icon: "🌹", title: "तुम्हारी खुशबू", text: "तुम्हारी मौजूदगी ही मेरे दिल को सुकून देती है।" },
+                { icon: "💝", title: "हमेशा साथ", text: "हर जन्म में बस तुम्हारा साथ चाहिए, यही मेरी सबसे बड़ी ख्वाहिश है।" },
+                { icon: "✨", title: "सपनों की रानी", text: "मेरे हर ख्वाब में सिर्फ तुम हो, और तुम्हीं मेरी हकीकत हो।" },
+                { icon: "🎀", title: "मीठी यादें", text: "तुम्हारे साथ बिताए पल मेरी जिंदगी की सबसे खूबसूरत यादें हैं।" },
+                { icon: "💗", title: "दिल की बात", text: "मेरा दिल हर धड़कन में तुम्हारा नाम दोहराता है।" },
+                { icon: "🌺", title: "तुम्हारा साथ", text: "तुम साथ हो तो दुनिया की हर खुशी मेरे करीब लगती है।" }
             ],
             dreams: [
-                { icon: "🏠", title: "अपना आशियाना", description: "Daulat के साथ एक खूबसूरत घर बनाएंगे" },
-                { icon: "🌍", title: "दुनिया देखेंगे", description: "Daulat का हाथ थामे पूरी दुनिया घूमेंगे" },
-                { icon: "👶", title: "प्यारा परिवार", description: "Daulat के साथ एक खुशहाल परिवार" },
-                { icon: "💼", title: "सफलता की उड़ान", description: "Daulat के सपोर्ट से हर मुकाम हासिल करेंगे" },
-                { icon: "🌅", title: "सुनहरा रिटायरमेंट", description: "Daulat के साथ आराम से बुढ़ापा" },
-                { icon: "❤️", title: "अनंत प्यार", description: "Daulat के साथ हर जन्म में साथ रहेंगे" },
-                { icon: "🚗", title: "ड्रीम कार", description: "Daulat के साथ लॉन्ग ड्राइव पर जाएंगे" },
-                { icon: "🎓", title: "पढ़ाई पूरी", description: "Daulat को हमेशा सपोर्ट करूंगा" },
-                { icon: "🏝️", title: "बीच हाउस", description: "Daulat के साथ समंदर किनारे घर" },
-                { icon: "🌸", title: "खूबसूरत बगीचा", description: "Daulat के साथ गार्डनिंग करेंगे" }
+                { icon: "🏠", title: "अपना घर", description: "जहाँ प्यार और यादें बसेंगी।" },
+                { icon: "🌍", title: "दुनिया घूमना", description: "हर खूबसूरत जगह साथ देखेंगे।" },
+                { icon: "👶", title: "प्यारा परिवार", description: "खुशियों से भरा घर।" },
+                { icon: "💼", title: "सफलता", description: "मिलकर हर मुकाम हासिल करेंगे।" },
+                { icon: "🌅", title: "रिटायरमेंट", description: "सुकून भरा साथ।" },
+                { icon: "❤️", title: "अनंत प्यार", description: "हर जन्म में साथ।" },
+                { icon: "🚗", title: "ड्रीम कार", description: "लॉन्ग ड्राइव्स और यादें।" },
+                { icon: "🎓", title: "पढ़ाई पूरी", description: "एक-दूसरे का सहारा।" }
             ],
             together: [
-                { icon: "🌅", title: "Sunrise with Daulat", description: "सुबह-सुबह Daulat के साथ सूरज देखेंगे" },
-                { icon: "🍳", title: "Kitchen Romance", description: "Daulat के साथ मिलकर खाना बनाएंगे" },
-                { icon: "🎬", title: "Movie Nights", description: "Daulat की गोद में सिर रखकर फिल्में देखेंगे" },
-                { icon: "🚗", title: "Long Drives", description: "Daulat के साथ लॉन्ग ड्राइव पर जाएंगे" },
-                { icon: "📚", title: "Reading Together", description: "Daulat को कहानियाँ सुनाएंगे" },
-                { icon: "🌃", title: "Star Gazing", description: "Daulat के साथ तारों को गिनेंगे" }
+                { icon: "🌅", title: "सूर्योदय देखेंगे", description: "नए सपनों के साथ।" },
+                { icon: "🍳", title: "साथ खाना बनाएंगे", description: "छोटी खुशियों का स्वाद।" },
+                { icon: "🎬", title: "Movies देखेंगे", description: "साथ बिताई सुकून भरी रातें।" },
+                { icon: "🚗", title: "Long Drives", description: "यादों से भरे सफर।" },
+                { icon: "📚", title: "साथ पढ़ेंगे", description: "सीखेंगे, समझेंगे, बढ़ेंगे।" },
+                { icon: "🌃", title: "तारों को देखेंगे", description: "खामोशियों में भी प्यार होगा।" },
+                { icon: "🎵", title: "गाने सुनेंगे", description: "हर धुन में तुम्हारा नाम।" },
+                { icon: "🏖️", title: "समंदर किनारे", description: "लहरों संग खूबसूरत शामें।" },
+                { icon: "🌸", title: "बगीचे में घूमेंगे", description: "फूलों जैसी प्यारी बातें।" }
             ],
             promises: [
-                { 
-                    icon: "💝", 
-                    title: "प्यार का वादा", 
-                    message: "Daulat, तुझे हमेशा प्यार करूंगा,\nतेरे बिना कभी न रहूंगा,\nसात जन्मों का वादा है ये!\n💕 Forever Yours!" 
-                },
-                { 
-                    icon: "🌟", 
-                    title: "साथ का वादा", 
-                    message: "Daulat, हर मुश्किल में साथ दूंगा,\nतेरा हाथ कभी न छोड़ूंगा,\nये वादा है मेरा तुझसे!\n⭐ Always Together!" 
-                },
-                { 
-                    icon: "💖", 
-                    title: "खुशियों का वादा", 
-                    message: "Daulat, तुझे हमेशा खुश रखूंगा,\nतेरी हर ख्वाहिश पूरी करूंगा,\nये दिल सिर्फ तेरा है!\n💗 Only Yours!" 
-                },
-                { 
-                    icon: "🌹", 
-                    title: "प्यार भरा वादा", 
-                    message: "Daulat, तू मेरी जान है,\nतेरे लिए ये दिल बेक़रार है,\nतुझे पाकर धन्य हूँ मैं!\n🌺 My Everything!" 
-                },
-                { 
-                    icon: "💫", 
-                    title: "हमेशा के लिए", 
-                    message: "Daulat, तू मेरी दुनिया है,\nतेरे बिना कुछ भी नहीं,\nये प्यार अमर रहेगा!\n✨ Eternal Love!" 
-                },
-                { 
-                    icon: "🎀", 
-                    title: "विश्वास का वादा", 
-                    message: "Daulat, तुझ पर भरोसा है मुझे,\nतू ही मेरी मंज़िल है,\nसाथ चलेंगे हर राह पर!\n🎗️ Trust Forever!" 
-                },
-                { 
-                    icon: "🦋", 
-                    title: "ख्यालों का वादा", 
-                    message: "Daulat, तेरा ख्याल रखूंगा,\nतुझे कभी अकेला न छोड़ूंगा,\nतू मेरी प्राथमिकता है!\n🌸 Priority Always!" 
-                },
-                { 
-                    icon: "🌙", 
-                    title: "रातों का वादा", 
-                    message: "Daulat, तू मेरी चाँदनी है,\nतेरे बिना रातें सूनी हैं,\nतू मेरी रोशनी है!\n🌟 My Light!" 
-                },
-                { 
-                    icon: "💎", 
-                    title: "अनमोल वादा", 
-                    message: "Daulat, तू हीरे से कीमती है,\nमेरी ज़िन्दगी की सबसे बड़ी दौलत,\nतुझे कभी न खोऊंगा!\n👑 My Precious!" 
-                }
+                { icon: "💝", title: "प्यार का वादा", message: "तुम्हारा साथ मेरी सबसे बड़ी खुशी है — हमेशा निभाऊंगा।" },
+                { icon: "🌟", title: "तुम्हारी अहमियत", message: "तुम मेरी जिंदगी की सबसे खूबसूरत वजह हो।" },
+                { icon: "💖", title: "हमेशा के लिए", message: "हर जन्म में सिर्फ तुम्हें ही चाहूंगा।" },
+                { icon: "🌹", title: "मेरा गुलाब", message: "तुम मेरी जिंदगी की सबसे प्यारी खुशबू हो।" },
+                { icon: "💫", title: "मेरी दुनिया", message: "तुम हो तो सब है, तुम नहीं तो कुछ भी नहीं।" },
+                { icon: "🎀", title: "खास तोहफा", message: "तुम मेरी जिंदगी का सबसे अनमोल उपहार हो।" },
+                { icon: "🦋", title: "तितली सी", message: "तुम्हारी मासूमियत और खूबसूरती दिल छू जाती है।" },
+                { icon: "🌙", title: "मेरी चाँदनी", message: "तुम मेरी रातों की रोशनी हो।" },
+                { icon: "💎", title: "अनमोल", message: "तुमसे ज्यादा कीमती मेरे लिए कुछ नहीं।" }
             ],
             floatingItems: ['❤️', '💕', '💖', '💗', '💝', '💘', '🌹', '🥀', '💐', '🌸', '🌺', '✨', '💫', '⭐', '🦋', '🌷', '💮', '🏵️', '🎀', '💒']
         };
@@ -1679,7 +1511,7 @@
         document.getElementById('letterBody').innerHTML = jsonData.loveLetter.body.map(p => `<p>${p}</p>`).join('');
         document.getElementById('letterSignature').textContent = jsonData.loveLetter.signature;
 
-        // Create Always Flying Elements - More Transparent
+        // Create Always Flying Elements
         function createFloatingElements() {
             const container = document.getElementById('floatingElements');
             
@@ -1691,17 +1523,17 @@
                 item.style.fontSize = (Math.random() * 1.2 + 0.8) + 'rem';
                 item.style.animationDuration = (Math.random() * 10 + 10) + 's';
                 item.style.animationDelay = Math.random() * 2 + 's';
-                item.style.opacity = (Math.random() * 0.08 + 0.05); // More transparent
+                item.style.opacity = (Math.random() * 0.15 + 0.1);
                 container.appendChild(item);
                 
                 setTimeout(() => item.remove(), 22000);
             }
             
-            for (let i = 0; i < 10; i++) {
+            for (let i = 0; i < 12; i++) {
                 setTimeout(() => createItem(), i * 400);
             }
             
-            setInterval(createItem, 1200);
+            setInterval(createItem, 1000);
         }
 
         // Create sparkles on mouse move/touch
@@ -1759,7 +1591,7 @@
                 div.innerHTML = `
                     <span class="note-icon">${note.icon}</span>
                     <div class="note-title">${note.title}</div>
-                    <div class="note-text">${note.text.replace(/\n/g, '<br>')}</div>
+                    <div class="note-text">${note.text}</div>
                 `;
                 grid.appendChild(div);
             });
@@ -1810,7 +1642,7 @@
                             <div class="flip-hint">टैप करो और देखो 💕</div>
                         </div>
                         <div class="flip-card-back">
-                            <div class="flip-message">${promise.message.replace(/\n/g, '<br>')}</div>
+                            <div class="flip-message">${promise.message}</div>
                         </div>
                     </div>
                 `;
@@ -1857,7 +1689,7 @@
 
         function createParticles() {
             const container = document.getElementById('particles');
-            const particleCount = window.innerWidth < 768 ? 15 : 25;
+            const particleCount = window.innerWidth < 768 ? 20 : 35;
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.className = 'particle';
