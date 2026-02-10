@@ -1,0 +1,2244 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>🧸 Happy Teddy Day - Rohit ❤️ Daulat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Poppins:wght@300;400;500;600;700&family=Noto+Sans+Devanagari:wght@300;400;500;600;700&family=Dancing+Script:wght@400;600;700&family=Great+Vibes&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --teddy-dark: #8B4513;
+            --teddy-medium: #A0522D;
+            --teddy-light: #D2691E;
+            --teddy-cream: #DEB887;
+            --teddy-fur: #CD853F;
+            --pink-soft: #FFB6C1;
+            --pink-deep: #FF69B4;
+            --pink-light: #FFC0CB;
+            --gold: #FFD700;
+            --warm-brown: #B8860B;
+            --soft-white: #FFF8F0;
+            --heart-red: #E91E63;
+            --white: #ffffff;
+            --shadow: rgba(139, 69, 19, 0.4);
+            --shadow-dark: rgba(139, 69, 19, 0.5);
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100vw;
+        }
+
+        body {
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            background: linear-gradient(135deg, #FFF8F0 0%, #FFE4E1 50%, #FFDAB9 100%);
+            color: #333;
+            perspective: 1000px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: linear-gradient(to bottom, #FFF8F0, #FFE4E1);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(to bottom, var(--teddy-medium), var(--teddy-dark));
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(to bottom, var(--teddy-dark), #6B4423);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2400');
+            background-size: cover;
+            background-position: center;
+            background-attachment: scroll;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 1rem;
+        }
+
+        @media (min-width: 768px) {
+            .hero {
+                background-attachment: fixed;
+            }
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(139, 69, 19, 0.75) 0%, rgba(255, 182, 193, 0.60) 50%, rgba(160, 82, 45, 0.75) 100%);
+            backdrop-filter: blur(3px);
+        }
+
+        /* Animated Background Elements */
+        .hero-bg-animation {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-circle {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(255, 182, 193, 0.3), transparent);
+            animation: floatCircle 25s infinite ease-in-out;
+            filter: blur(3px);
+        }
+
+        @keyframes floatCircle {
+            0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+            25% { transform: translate(30px, -30px) scale(1.1) rotate(90deg); }
+            50% { transform: translate(-20px, 20px) scale(0.95) rotate(180deg); }
+            75% { transform: translate(25px, 25px) scale(1.05) rotate(270deg); }
+        }
+
+        /* Sparkle Stars */
+        .sparkle {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background: var(--pink-soft);
+            border-radius: 50%;
+            animation: sparkle 3s infinite;
+            box-shadow: 0 0 10px var(--pink-soft), 0 0 20px var(--pink-deep);
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            animation: heroFadeIn 1.5s ease;
+            width: 100%;
+            max-width: 100%;
+            padding: 0 0.5rem;
+        }
+
+        /* Couple Names */
+        .couple-names {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(1.8rem, 7vw, 5rem);
+            margin-bottom: 0.8rem;
+            animation: coupleGlow 3s ease-in-out infinite;
+            text-shadow: 0 0 20px rgba(255, 182, 193, 0.8), 2px 2px 10px rgba(0, 0, 0, 0.5);
+            line-height: 1.3;
+        }
+
+        .couple-names .name-rohit {
+            color: #fff;
+            display: inline-block;
+            animation: floatName 4s ease-in-out infinite;
+        }
+
+        .couple-names .loves {
+            color: var(--pink-soft);
+            display: inline-block;
+            font-size: clamp(1.5rem, 6vw, 4rem);
+            margin: 0 0.3rem;
+            animation: heartPulse 1.5s ease-in-out infinite;
+            text-shadow: 0 0 15px rgba(255, 182, 193, 0.8);
+        }
+
+        .couple-names .name-daulat {
+            color: var(--teddy-cream);
+            display: inline-block;
+            animation: floatName 4s ease-in-out infinite reverse;
+            text-shadow: 0 0 20px rgba(222, 184, 135, 0.9);
+        }
+
+        @keyframes floatName {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-8px); }
+        }
+
+        @keyframes heartPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+
+        @keyframes coupleGlow {
+            0%, 100% { filter: drop-shadow(0 0 15px rgba(255, 182, 193, 0.5)); }
+            50% { filter: drop-shadow(0 0 30px rgba(255, 182, 193, 0.8)); }
+        }
+
+        /* Hero Title with visible teddies */
+        .hero-title {
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.3rem;
+        }
+
+        .hero-title .teddy-emoji {
+            font-size: clamp(2rem, 8vw, 5rem);
+            animation: teddyFloat 3s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(255, 182, 193, 0.8));
+        }
+
+        .hero-title .teddy-emoji:first-child {
+            animation-delay: 0s;
+        }
+
+        .hero-title .teddy-emoji:last-child {
+            animation-delay: -1.5s;
+        }
+
+        .hero-title .title-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.2rem, 9vw, 6rem);
+            font-weight: 400;
+            background: linear-gradient(135deg, #fff, #FFB6C1, #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            filter: drop-shadow(3px 3px 6px rgba(0, 0, 0, 0.7));
+            text-shadow: none;
+        }
+
+        @keyframes teddyFloat {
+            0%, 100% { transform: translateY(0) rotate(-10deg); }
+            50% { transform: translateY(-12px) rotate(10deg); }
+        }
+
+        .hero-content .hindi-subtitle {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(0.9rem, 3.5vw, 1.8rem);
+            font-weight: 500;
+            margin-top: 0.8rem;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+            color: #FFF0F5;
+            letter-spacing: 1px;
+            animation: subtitlePulse 3s ease-in-out infinite;
+            padding: 0 0.5rem;
+            line-height: 1.5;
+        }
+
+        @keyframes subtitlePulse {
+            0%, 100% { opacity: 0.9; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.01); }
+        }
+
+        .hero-content .date {
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1rem, 3.5vw, 1.6rem);
+            font-weight: 600;
+            margin-top: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        /* 3D Rotating Teddy */
+        .hero-teddy-3d {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: clamp(3rem, 10vw, 6rem);
+            animation: teddy3DRotate 8s linear infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 182, 193, 0.9));
+            z-index: 3;
+        }
+
+        @keyframes teddy3DRotate {
+            0% { transform: translateX(-50%) rotateY(0deg) scale(1); }
+            25% { transform: translateX(-50%) rotateY(90deg) scale(1.15); }
+            50% { transform: translateX(-50%) rotateY(180deg) scale(1); }
+            75% { transform: translateX(-50%) rotateY(270deg) scale(1.15); }
+            100% { transform: translateX(-50%) rotateY(360deg) scale(1); }
+        }
+
+        /* Side Elements */
+        .side-teddy {
+            position: absolute;
+            font-size: 2rem;
+            z-index: 2;
+            animation: sideTeddyFloat 6s ease-in-out infinite;
+            filter: drop-shadow(0 0 15px rgba(255, 182, 193, 0.6));
+            display: none;
+        }
+
+        @media (min-width: 480px) {
+            .side-teddy {
+                display: block;
+            }
+        }
+
+        .side-teddy.left { left: 3%; top: 30%; animation-delay: 0s; }
+        .side-teddy.right { right: 3%; top: 40%; animation-delay: -3s; }
+        .side-teddy.top-left { left: 8%; top: 15%; font-size: 1.5rem; animation-delay: -1.5s; }
+        .side-teddy.top-right { right: 8%; top: 20%; font-size: 1.8rem; animation-delay: -4s; }
+
+        @keyframes sideTeddyFloat {
+            0%, 100% { transform: translateY(0) rotate(-15deg); }
+            50% { transform: translateY(-15px) rotate(15deg); }
+        }
+
+        /* Floating Menu */
+        .floating-menu {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+        }
+
+        .menu-toggle, .fullscreen-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--teddy-medium), var(--teddy-dark));
+            backdrop-filter: blur(15px);
+            border: 2px solid rgba(255, 182, 193, 0.5);
+            box-shadow: 0 8px 25px var(--shadow-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 768px) {
+            .menu-toggle, .fullscreen-btn {
+                width: 55px;
+                height: 55px;
+                font-size: 1.5rem;
+            }
+        }
+
+        .menu-toggle:active, .fullscreen-btn:active {
+            transform: scale(0.95);
+        }
+
+        .menu-items {
+            position: absolute;
+            top: 55px;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(25px);
+            border-radius: 20px;
+            border: 2px solid rgba(255, 182, 193, 0.6);
+            box-shadow: 0 20px 50px var(--shadow-dark);
+            padding: 1rem;
+            min-width: 200px;
+            opacity: 0;
+            pointer-events: none;
+            transform: translateY(-20px) scale(0.9);
+            transition: all 0.4s ease;
+        }
+
+        .menu-items.active {
+            opacity: 1;
+            pointer-events: all;
+            transform: translateY(0) scale(1);
+        }
+
+        .menu-item {
+            padding: 0.8rem 1rem;
+            margin: 0.4rem 0;
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(255, 228, 225, 0.6));
+            border-radius: 12px;
+            text-decoration: none;
+            color: var(--teddy-dark);
+            display: block;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .menu-item:active {
+            background: linear-gradient(135deg, var(--teddy-medium), var(--teddy-dark));
+            color: white;
+            transform: scale(0.98);
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 3rem 1rem;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        @media (min-width: 768px) {
+            .content-section {
+                padding: 5rem 1.5rem;
+            }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 6vw, 3.5rem);
+            text-align: center;
+            color: var(--teddy-dark);
+            margin-bottom: 2.5rem;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+            font-weight: 900;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            padding: 0 0.5rem;
+            line-height: 1.4;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(to right, transparent, var(--teddy-medium), var(--pink-soft), var(--teddy-medium), transparent);
+            border-radius: 3px;
+        }
+
+        /* Love Letter Section */
+        .love-letter-section {
+            background: linear-gradient(135deg, #FFF8F0, #FFE4E1, #FFDAB9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .love-letter-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .love-letter {
+            background: linear-gradient(135deg, #FFFAFA 0%, #FFF8F0 50%, #FFF0F5 100%);
+            border-radius: 20px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 25px 50px rgba(139, 69, 19, 0.2), 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            border: 3px solid rgba(255, 182, 193, 0.6);
+        }
+
+        @media (min-width: 768px) {
+            .love-letter {
+                padding: 3.5rem 2.5rem;
+            }
+        }
+
+        .love-letter::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 70px;
+            background: linear-gradient(135deg, var(--teddy-light), var(--teddy-medium), var(--teddy-dark));
+            border-radius: 20px 20px 0 0;
+            clip-path: polygon(0 0, 100% 0, 100% 50%, 50% 100%, 0 50%);
+        }
+
+        .letter-seal {
+            position: absolute;
+            top: 45px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 55px;
+            height: 55px;
+            background: linear-gradient(135deg, var(--pink-soft), var(--pink-deep));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+            z-index: 5;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .letter-stamp {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 55px;
+            height: 65px;
+            background: linear-gradient(135deg, #fff, #FFF8F0);
+            border: 3px dashed var(--teddy-dark);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            transform: rotate(8deg);
+            box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.15);
+            z-index: 2;
+        }
+
+        .letter-content {
+            margin-top: 60px;
+            font-family: 'Dancing Script', cursive;
+            font-size: clamp(1rem, 3.5vw, 1.4rem);
+            color: var(--teddy-dark);
+            line-height: 2;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .letter-greeting {
+            font-size: clamp(1.5rem, 5vw, 2.2rem);
+            color: var(--teddy-medium);
+            margin-bottom: 1.2rem;
+            font-weight: 700;
+        }
+
+        .letter-highlight {
+            font-weight: 700;
+            color: var(--pink-deep);
+            font-size: 1.1em;
+        }
+
+        .letter-signature {
+            margin-top: 2rem;
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            color: var(--teddy-dark);
+            font-style: italic;
+        }
+
+        .letter-hearts {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+            0%, 100% { transform: translateX(-50%) scale(1); }
+            50% { transform: translateX(-50%) scale(1.2); }
+        }
+
+        /* Reasons Section - Why She's Like a Teddy */
+        .reasons-section {
+            background: linear-gradient(180deg, #FFE4E1, #FFF8F0, #FFDAB9);
+            position: relative;
+        }
+
+        .reasons-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        @media (min-width: 500px) {
+            .reasons-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .reasons-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .reason-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .reason-card:active {
+            transform: scale(0.98);
+        }
+
+        .reason-card:nth-child(1) { border-color: var(--teddy-medium); }
+        .reason-card:nth-child(2) { border-color: var(--pink-soft); }
+        .reason-card:nth-child(3) { border-color: var(--teddy-light); }
+        .reason-card:nth-child(4) { border-color: var(--teddy-cream); }
+        .reason-card:nth-child(5) { border-color: var(--pink-deep); }
+        .reason-card:nth-child(6) { border-color: var(--teddy-dark); }
+
+        .reason-emoji {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            display: block;
+            animation: reasonFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.2));
+        }
+
+        @keyframes reasonFloat {
+            0%, 100% { transform: translateY(0) rotate(-5deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+
+        .reason-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--teddy-dark);
+        }
+
+        .reason-text {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Teddy Hug Section */
+        .teddy-hug-section {
+            background: linear-gradient(135deg, var(--teddy-dark), var(--teddy-medium), var(--pink-deep));
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hug-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hug-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(255, 182, 193, 0.5);
+        }
+
+        .hug-teddy-animation {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+        }
+
+        .hug-teddy {
+            font-size: 5rem;
+            animation: teddyHug 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 30px rgba(255, 182, 193, 0.8));
+        }
+
+        @keyframes teddyHug {
+            0%, 100% { transform: scale(1) rotate(-5deg); }
+            25% { transform: scale(1.1) rotate(5deg); }
+            50% { transform: scale(1.2) rotate(0deg); }
+            75% { transform: scale(1.1) rotate(-5deg); }
+        }
+
+        .hug-hearts {
+            position: absolute;
+            font-size: 1.5rem;
+            animation: floatHearts 2s ease-in-out infinite;
+        }
+
+        .hug-hearts:nth-child(2) { top: 10%; left: 10%; animation-delay: 0s; }
+        .hug-hearts:nth-child(3) { top: 5%; right: 15%; animation-delay: 0.3s; }
+        .hug-hearts:nth-child(4) { bottom: 20%; left: 5%; animation-delay: 0.6s; }
+        .hug-hearts:nth-child(5) { bottom: 15%; right: 10%; animation-delay: 0.9s; }
+
+        @keyframes floatHearts {
+            0%, 100% { transform: translateY(0) scale(1); opacity: 0.7; }
+            50% { transform: translateY(-15px) scale(1.2); opacity: 1; }
+        }
+
+        .hug-message {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: #FFF0F5;
+            line-height: 1.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .hug-message .name-highlight {
+            color: var(--teddy-cream);
+            font-weight: 700;
+        }
+
+        /* Teddy Types Section */
+        .teddy-types-section {
+            background: linear-gradient(135deg, #FFF8F0, #FFE4E1);
+            padding: 3rem 1rem;
+        }
+
+        .teddy-types-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .teddy-types-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .teddy-types-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 900px) {
+            .teddy-types-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .teddy-type-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            border: 3px solid var(--pink-soft);
+            transition: all 0.4s ease;
+        }
+
+        .teddy-type-card:active {
+            transform: scale(0.98);
+        }
+
+        .teddy-type-emoji {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: teddyBounce 3s ease-in-out infinite;
+        }
+
+        @keyframes teddyBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .teddy-type-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--teddy-dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .teddy-type-desc {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
+        }
+
+        /* Promises Section */
+        .promises-section {
+            background: linear-gradient(135deg, #FFDAB9, #FFE4E1, #FFF8F0);
+            padding: 3rem 1rem;
+        }
+
+        .promises-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .promises-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+
+        @media (min-width: 600px) {
+            .promises-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .promise-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 240, 245, 0.98));
+            border-radius: 20px;
+            padding: 1.8rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid var(--pink-deep);
+            transition: all 0.4s ease;
+        }
+
+        .promise-card:active {
+            transform: scale(0.98);
+        }
+
+        .promise-icon {
+            font-size: 2.5rem;
+            flex-shrink: 0;
+        }
+
+        .promise-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            color: var(--teddy-dark);
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        /* Shayari Section */
+        .shayari-section {
+            background: linear-gradient(to bottom, rgba(255, 240, 245, 0.9), rgba(255, 228, 225, 0.8));
+        }
+
+        .shayari-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .shayari-hint {
+            text-align: center;
+            color: var(--teddy-dark);
+            margin-bottom: 2rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .shayari-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 600px) {
+            .shayari-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+        }
+
+        .shayari-card-wrapper {
+            perspective: 1500px;
+            height: 300px;
+        }
+
+        @media (min-width: 768px) {
+            .shayari-card-wrapper {
+                height: 340px;
+            }
+        }
+
+        .shayari-card {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.7s ease;
+            cursor: pointer;
+        }
+
+        .shayari-card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .shayari-front, .shayari-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            box-shadow: 0 15px 40px var(--shadow);
+        }
+
+        .shayari-front {
+            background: linear-gradient(135deg, var(--teddy-medium), var(--teddy-dark), var(--pink-deep));
+            border: 3px solid rgba(255, 182, 193, 0.4);
+        }
+
+        .shayari-front-content {
+            text-align: center;
+            color: white;
+        }
+
+        .shayari-front-content .teddy-icon {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: teddyFloat 4s ease-in-out infinite;
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+        }
+
+        .shayari-front-content .shayari-number {
+            font-family: 'Great Vibes', cursive;
+            font-size: 1.6rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .shayari-front-content .tap-hint {
+            font-size: 0.9rem;
+            opacity: 0.85;
+            margin-top: 0.8rem;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .shayari-back {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98), rgba(255, 240, 245, 0.98));
+            border: 3px solid var(--teddy-medium);
+            transform: rotateY(180deg);
+        }
+
+        .shayari-text {
+            font-size: clamp(0.85rem, 2.5vw, 1.05rem);
+            line-height: 1.9;
+            color: var(--teddy-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            white-space: pre-line;
+        }
+
+        .shayari-text .highlight-name {
+            color: var(--pink-deep);
+            font-weight: 700;
+        }
+
+        /* Teddy Collection Section */
+        .teddy-collection-section {
+            background: linear-gradient(180deg, #FFDAB9, #FFE4E1, #FFF8F0);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .collection-container {
+            max-width: 550px;
+            margin: 0 auto;
+        }
+
+        .teddy-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 3px solid rgba(255, 182, 193, 0.6);
+        }
+
+        .teddy-display {
+            width: 180px;
+            height: 180px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            background: conic-gradient(
+                var(--teddy-dark) 0deg,
+                var(--pink-soft) 60deg,
+                var(--teddy-medium) 120deg,
+                var(--pink-deep) 180deg,
+                var(--teddy-light) 240deg,
+                var(--teddy-cream) 300deg,
+                var(--teddy-dark) 360deg
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: teddyRotate 12s linear infinite;
+            box-shadow: 0 0 40px rgba(255, 182, 193, 0.4);
+        }
+
+        @keyframes teddyRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .teddy-inner {
+            width: 145px;
+            height: 145px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, white, #FFF8F0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            animation: teddyRotate 12s linear infinite reverse;
+        }
+
+        .teddy-emoji-large {
+            font-size: 3.5rem;
+            animation: teddyPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes teddyPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.15); }
+        }
+
+        .teddy-label {
+            font-size: 0.9rem;
+            color: var(--teddy-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-weight: 600;
+            margin-top: 0.3rem;
+        }
+
+        .teddy-meanings {
+            margin-top: 1.5rem;
+            text-align: left;
+        }
+
+        .meaning-item {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 0.95rem;
+            color: var(--teddy-dark);
+            margin-bottom: 0.6rem;
+            padding: 0.7rem 1rem;
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(139, 69, 19, 0.08));
+            border-radius: 12px;
+            border-left: 3px solid var(--pink-deep);
+        }
+
+        .teddy-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .stat-item {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(139, 69, 19, 0.1));
+            padding: 1rem 0.5rem;
+            border-radius: 15px;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+        }
+
+        .stat-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .stat-value {
+            font-size: 1.1rem;
+            font-weight: 900;
+            color: var(--teddy-medium);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--teddy-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            background: linear-gradient(135deg, #FFF8F0, #FFE4E1);
+            padding: 3rem 1rem;
+        }
+
+        .comparison-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .comparison-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 3px solid rgba(255, 182, 193, 0.6);
+            text-align: center;
+        }
+
+        .comparison-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 4vw, 2rem);
+            color: var(--teddy-dark);
+            margin-bottom: 2rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .comparison-item {
+            padding: 1rem;
+        }
+
+        .comparison-emoji {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-label {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            color: var(--teddy-dark);
+            font-weight: 600;
+        }
+
+        .comparison-vs {
+            font-family: 'Great Vibes', cursive;
+            font-size: 2rem;
+            color: var(--pink-deep);
+        }
+
+        .comparison-result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.15), rgba(139, 69, 19, 0.1));
+            border-radius: 15px;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1.1rem;
+            color: var(--teddy-dark);
+            font-weight: 600;
+            line-height: 1.8;
+        }
+
+        .comparison-result .name-highlight {
+            color: var(--pink-deep);
+            font-weight: 700;
+        }
+
+        .comparison-result .winner {
+            display: block;
+            margin-top: 1rem;
+            font-size: 1.3rem;
+            color: var(--teddy-medium);
+        }
+
+        /* Sweet Lines Section */
+        .sweetlines-section {
+            background: linear-gradient(135deg, rgba(255, 240, 245, 0.9), rgba(255, 218, 185, 0.9));
+        }
+
+        .sweetlines-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .tear-pages {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.2rem;
+        }
+
+        @media (min-width: 500px) {
+            .tear-pages {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        .tear-page {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(255, 240, 245, 0.98) 100%);
+            box-shadow: 0 12px 35px var(--shadow);
+            padding: 1.8rem 1.2rem;
+            border-radius: 0 20px 20px 0;
+            position: relative;
+            transition: all 0.4s ease;
+            border-left: 5px solid var(--teddy-medium);
+        }
+
+        .tear-page::after {
+            content: '🧸';
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            font-size: 1.5rem;
+            opacity: 0.3;
+        }
+
+        .tear-page:active {
+            transform: scale(0.98);
+        }
+
+        .tear-page-text {
+            font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+            color: var(--teddy-dark);
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            text-align: center;
+            font-weight: 600;
+            line-height: 1.7;
+        }
+
+        .tear-page-text .name-highlight {
+            color: var(--pink-deep);
+            font-weight: 700;
+        }
+
+        /* Teddy Gift Section */
+        .teddy-gift-section {
+            background: linear-gradient(135deg, var(--teddy-dark), var(--pink-deep), var(--teddy-medium));
+            padding: 4rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .gift-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .gift-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.5rem, 10vw, 5rem);
+            color: white;
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(255, 182, 193, 0.5);
+            animation: giftPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes giftPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.9; }
+        }
+
+        .gift-teddy-container {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 2rem;
+            position: relative;
+        }
+
+        .gift-teddy {
+            font-size: 6rem;
+            animation: giftTeddyBounce 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 40px rgba(255, 182, 193, 0.8));
+        }
+
+        @keyframes giftTeddyBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-20px) scale(1.1); }
+        }
+
+        .gift-name {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2rem, 8vw, 4rem);
+            color: var(--teddy-cream);
+            text-shadow: 0 0 25px rgba(222, 184, 135, 0.7);
+            margin-bottom: 1rem;
+        }
+
+        .gift-subtitle {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(1rem, 3vw, 1.4rem);
+            color: #FFF0F5;
+            line-height: 1.8;
+        }
+
+        /* Special Message Section */
+        .special-message-section {
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #2d1b2d);
+            padding: 4rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .special-message-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="50" font-size="30" fill="%23FFB6C1" opacity="0.08">🧸</text></svg>');
+            background-size: 70px;
+            animation: bgFloat 40s linear infinite;
+        }
+
+        @keyframes bgFloat {
+            0% { background-position: 0 0; }
+            100% { background-position: 250px 250px; }
+        }
+
+        .special-message-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .special-message-box {
+            background: rgba(255, 255, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border-radius: 30px;
+            padding: 3rem 1.5rem;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .special-message-box {
+                padding: 4rem 2.5rem;
+            }
+        }
+
+        .special-message-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2rem, 7vw, 4rem);
+            color: var(--pink-soft);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 30px rgba(255, 182, 193, 0.6);
+        }
+
+        .special-message-text {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: clamp(0.95rem, 2.5vw, 1.2rem);
+            color: rgba(255, 255, 255, 0.9);
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        .special-message-text .name-highlight {
+            color: var(--pink-soft);
+            font-weight: 700;
+            font-size: 1.1em;
+        }
+
+        .special-message-emoji {
+            font-size: 3.5rem;
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+
+        /* Cuddle Counter Section */
+        .cuddle-counter-section {
+            background: linear-gradient(135deg, #FFE4E1, #FFF8F0, #FFDAB9);
+            padding: 3rem 1rem;
+            text-align: center;
+        }
+
+        .cuddle-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .cuddle-box {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 25px;
+            padding: 2.5rem 1.5rem;
+            box-shadow: 0 20px 50px var(--shadow);
+            border: 3px solid rgba(255, 182, 193, 0.6);
+        }
+
+        .cuddle-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.3rem, 4vw, 1.8rem);
+            color: var(--teddy-dark);
+            margin-bottom: 2rem;
+        }
+
+        .cuddle-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 500px) {
+            .cuddle-stats {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .cuddle-stat {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.2), rgba(139, 69, 19, 0.1));
+            padding: 1.5rem 1rem;
+            border-radius: 20px;
+            border: 2px solid rgba(255, 182, 193, 0.3);
+        }
+
+        .cuddle-stat-icon {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .cuddle-stat-value {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--teddy-dark);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .cuddle-stat-label {
+            font-size: 0.85rem;
+            color: #666;
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            margin-top: 0.3rem;
+        }
+
+        .cuddle-message {
+            margin-top: 2rem;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3rem;
+            color: var(--teddy-dark);
+        }
+
+        /* Flying Elements */
+        .flying-elements {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 999;
+            overflow: hidden;
+        }
+
+        .flying-teddy {
+            position: absolute;
+            top: -50px;
+            opacity: 0.3;
+            animation: flyDown linear infinite;
+        }
+
+        @keyframes flyDown {
+            0% {
+                transform: translateX(0) rotate(0deg) scale(1);
+                opacity: 0;
+            }
+            5% {
+                opacity: 0.3;
+            }
+            50% {
+                transform: translateX(60px) rotate(360deg) scale(1.1);
+            }
+            95% {
+                opacity: 0.3;
+            }
+            100% {
+                top: 105%;
+                transform: translateX(-30px) rotate(720deg) scale(0.9);
+                opacity: 0;
+            }
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 2rem;
+            animation: scrollBounce 2s infinite;
+            z-index: 10;
+            filter: drop-shadow(0 0 12px rgba(0, 0, 0, 0.6));
+        }
+
+        @keyframes scrollBounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-20px); }
+            60% { transform: translateX(-50%) translateY(-12px); }
+        }
+
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Loading Animation */
+        .loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--teddy-dark), var(--pink-deep), var(--teddy-medium));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+
+        .loader.hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .loader-content {
+            text-align: center;
+            color: white;
+            padding: 1rem;
+        }
+
+        .loader-teddy {
+            font-size: 5rem;
+            animation: loaderPulse 1.2s ease-in-out infinite;
+            filter: drop-shadow(0 0 25px rgba(255, 182, 193, 0.7));
+        }
+
+        @keyframes loaderPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(15deg); }
+        }
+
+        .loader-text {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(1.8rem, 6vw, 2.5rem);
+            margin-top: 1rem;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .loader-subtext {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            font-size: 1rem;
+            margin-top: 0.5rem;
+            opacity: 0.9;
+        }
+
+        /* Desktop hover effects */
+        @media (min-width: 1024px) {
+            .menu-toggle:hover {
+                transform: scale(1.1) rotate(180deg);
+            }
+
+            .fullscreen-btn:hover {
+                transform: scale(1.1);
+            }
+
+            .menu-item:hover {
+                background: linear-gradient(135deg, var(--teddy-medium), var(--teddy-dark));
+                color: white;
+                transform: translateX(-8px);
+            }
+
+            .reason-card:hover {
+                transform: translateY(-15px) scale(1.03);
+                box-shadow: 0 30px 60px rgba(0, 0, 0, 0.18);
+            }
+
+            .tear-page:hover {
+                transform: translateY(-12px) translateX(10px) rotate(1deg);
+                box-shadow: 0 30px 60px var(--shadow-dark);
+            }
+
+            .love-letter:hover {
+                transform: rotateY(-3deg) rotateX(3deg);
+                box-shadow: 0 40px 70px rgba(139, 69, 19, 0.3);
+            }
+
+            .special-message-box:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 45px 80px rgba(0, 0, 0, 0.4);
+            }
+
+            .teddy-type-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+            }
+
+            .promise-card:hover {
+                transform: translateX(10px);
+                box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="loader-teddy">🧸</div>
+            <div class="loader-text">Rohit ❤️ Daulat</div>
+            <div class="loader-subtext">एक प्यारा सा टेडी तुम्हारे लिए 💕</div>
+        </div>
+    </div>
+
+    <!-- Flying Elements -->
+    <div class="flying-elements" id="flyingElements"></div>
+
+    <!-- Floating Menu -->
+    <div class="floating-menu">
+        <div class="fullscreen-btn" id="fullscreenBtn" onclick="toggleFullscreen()">⛶</div>
+        <div class="menu-toggle" onclick="toggleMenu()">🧸</div>
+        <div class="menu-items" id="menuItems">
+            <a href="index.html" class="menu-item">🏠 Home</a>
+            <a href="a.html" class="menu-item">🌹 Rose Day</a>
+            <a href="b.html" class="menu-item">💍 Propose Day</a>
+            <a href="c.html" class="menu-item">🍫 Chocolate Day</a>
+            <a href="d.html" class="menu-item">🧸 Teddy Day</a>
+            <a href="e.html" class="menu-item">🤝 Promise Day</a>
+            <a href="f.html" class="menu-item">🤗 Hug Day</a>
+            <a href="g.html" class="menu-item">💋 Kiss Day</a>
+            <a href="h.html" class="menu-item">❤️ Valentine Day</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg-animation">
+            <div class="floating-circle" style="width: 200px; height: 200px; top: 10%; left: 5%;"></div>
+            <div class="floating-circle" style="width: 150px; height: 150px; top: 50%; right: 5%; animation-delay: -5s;"></div>
+            <div class="floating-circle" style="width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: -10s;"></div>
+        </div>
+
+        <!-- Side Elements -->
+        <div class="side-teddy left">🧸</div>
+        <div class="side-teddy right">🧸</div>
+        <div class="side-teddy top-left">💕</div>
+        <div class="side-teddy top-right">✨</div>
+
+        <!-- Sparkles -->
+        <div class="sparkle" style="top: 20%; left: 15%; animation-delay: 0s;"></div>
+        <div class="sparkle" style="top: 30%; right: 20%; animation-delay: 0.5s;"></div>
+        <div class="sparkle" style="top: 60%; left: 25%; animation-delay: 1s;"></div>
+        <div class="sparkle" style="top: 45%; right: 15%; animation-delay: 1.5s;"></div>
+
+        <div class="hero-content">
+            <div class="couple-names">
+                <span class="name-rohit">❤️ Rohit</span>
+                <span class="loves">🧸</span>
+                <span class="name-daulat">Daulat ❤️</span>
+            </div>
+            
+            <!-- Title with visible teddies -->
+            <div class="hero-title">
+                <span class="teddy-emoji">🧸</span>
+                <span class="title-text">Happy Teddy Day</span>
+                <span class="teddy-emoji">🧸</span>
+            </div>
+            
+            <div class="hindi-subtitle">तुम मेरी सबसे प्यारी और नरम सी टेडी हो 💕</div>
+            <p class="date">10 February 2026 🧸</p>
+        </div>
+        <div class="hero-teddy-3d">🧸</div>
+        <div class="scroll-indicator">↓</div>
+    </section>
+
+    <!-- Love Letter Section - UPDATED -->
+    <section class="content-section love-letter-section">
+        <h2 class="section-title">💌 दौलत के नाम — प्यारा सा खत 💌</h2>
+        <div class="love-letter-container">
+            <div class="love-letter">
+                <div class="letter-seal">🧸</div>
+                <div class="letter-stamp">💕</div>
+                <div class="letter-content">
+                    <div class="letter-greeting">मेरी सबसे प्यारी दौलत ❤️🧸</div>
+                    <p>
+                        कभी-कभी सोचता हूँ कि अगर तुम मेरी ज़िंदगी में नहीं आती,
+                        तो शायद मुझे ये कभी समझ ही नहीं आता
+                        कि किसी की presence इतनी खूबसूरत भी हो सकती है।
+                        <br><br>
+                        तुम सिर्फ एक इंसान नहीं हो मेरे लिए —
+                        तुम वो feeling हो जो दिल को सुकून देती है,
+                        वो मुस्कान हो जो बिना वजह भी खुश कर देती है,
+                        और वो आदत हो जो अब छोड़ना नामुमकिन है।
+                        <br><br>
+                        जब तुम पास होती हो,
+                        तो दुनिया थोड़ी कम complicated लगती है,
+                        और जब दूर होती हो,
+                        तो तुम्हारी याद ही मेरा favourite comfort बन जाती है।
+                        <br><br>
+                        सच कहूँ तो Teddy Day पर लोग teddy gift करते हैं,
+                        लेकिन मुझे लगता है —
+                        <span class="letter-highlight">मुझे खुद ही तुम्हारा Teddy बन जाना चाहिए।</span>
+                        <br>
+                        ताकि जब भी तुम्हें hug चाहिए हो,
+                        जब भी तुम उदास हो,
+                        या बस किसी अपने की ज़रूरत हो…
+                        मैं हमेशा तुम्हारे साथ रह सकूँ।
+                        <br><br>
+                        तुम्हारी हँसी, तुम्हारी बातें, तुम्हारी care —
+                        ये सब मेरी everyday happiness बन चुके हैं।
+                        और honestly, तुम्हारे बिना future imagine करना
+                        अब possible ही नहीं लगता।
+                        <br><br>
+                        बस एक बात हमेशा याद रखना —
+                        तुम मेरे लिए option नहीं हो,
+                        <span class="letter-highlight">तुम मेरी priority हो… और हमेशा रहोगी। ❤️</span>
+                    </p>
+                    <div class="letter-signature">Happy Teddy Day, मेरी सबसे प्यारी Teddy 🧸💕<br>~ हमेशा तुम्हारा, रोहित ❤️</div>
+                </div>
+                <div class="letter-hearts">💕 🧸 💕</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reasons Section - UPDATED -->
+    <section class="content-section reasons-section">
+        <h2 class="section-title">🧸 तुम टेडी जैसी क्यों हो 🧸</h2>
+        <div class="reasons-grid">
+            
+            <div class="reason-card">
+                <span class="reason-emoji">🤗</span>
+                <div class="reason-title">Comfort Person</div>
+                <div class="reason-text">तुम्हारे पास आते ही दिल अपने आप शांत हो जाता है।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">💖</span>
+                <div class="reason-title">Pure Heart</div>
+                <div class="reason-text">तुम्हारा दिल उतना ही soft है जितना कोई teddy bear।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">😊</span>
+                <div class="reason-title">Mood Healer</div>
+                <div class="reason-text">तुम्हारी एक smile पूरे दिन को बेहतर बना देती है।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">✨</span>
+                <div class="reason-title">Forever Feeling</div>
+                <div class="reason-text">तुम temporary नहीं, मेरी always वाली feeling हो।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">🧸</span>
+                <div class="reason-title">Cute Beyond Words</div>
+                <div class="reason-text">सच कहूँ — teddy भी तुम्हारे आगे fail है।</div>
+            </div>
+
+            <div class="reason-card">
+                <span class="reason-emoji">💕</span>
+                <div class="reason-title">My Safe Place</div>
+                <div class="reason-text">तुम्हारे साथ मुझे खुद को strong और safe feel होता है।</div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Teddy Hug Section - UPDATED -->
+    <section class="teddy-hug-section">
+        <div class="hug-container">
+            <div class="hug-title">🤗 Virtual Teddy Hug 🤗</div>
+            <div class="hug-teddy-animation">
+                <div class="hug-teddy">🧸</div>
+                <span class="hug-hearts">💕</span>
+                <span class="hug-hearts">💖</span>
+                <span class="hug-hearts">💗</span>
+                <span class="hug-hearts">💓</span>
+            </div>
+            <div class="hug-message">
+                <span class="name-highlight">दौलत</span>, ये hug सिर्फ screen से नहीं,
+                सीधे दिल से तुम्हारे लिए है।
+                <br><br>
+                जब भी तुम्हें अकेलापन लगे,
+                जब भी मन heavy हो जाए,
+                या बस किसी अपने की ज़रूरत महसूस हो —
+                बस ये याद करना कि
+                तुम्हारा Teddy हमेशा तुम्हारे साथ है।
+                <br><br>
+                Distance कुछ भी हो,
+                care और love कभी कम नहीं होंगे।
+                <br><br>
+                <strong>Unlimited hugs, unlimited love — सिर्फ तुम्हारे लिए 🧸❤️</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Teddy Types Section - UPDATED -->
+    <section class="content-section teddy-types-section">
+        <div class="teddy-types-container">
+            <h2 class="section-title">🧸 तुम्हारे लिए Special Teddies 🧸</h2>
+            <div class="teddy-types-grid">
+                
+                <div class="teddy-type-card">
+                    <div class="teddy-type-emoji">🧸</div>
+                    <div class="teddy-type-name">Brown Teddy</div>
+                    <div class="teddy-type-desc">Strong, deep और reliable love जैसा मेरा प्यार।</div>
+                </div>
+
+                <div class="teddy-type-card">
+                    <div class="teddy-type-emoji">🐻‍❄️</div>
+                    <div class="teddy-type-name">White Teddy</div>
+                    <div class="teddy-type-desc">Pure intentions और clean heart।</div>
+                </div>
+
+                <div class="teddy-type-card">
+                    <div class="teddy-type-emoji">🩷</div>
+                    <div class="teddy-type-name">Pink Teddy</div>
+                    <div class="teddy-type-desc">Care, affection और emotional warmth।</div>
+                </div>
+
+                <div class="teddy-type-card">
+                    <div class="teddy-type-emoji">💛</div>
+                    <div class="teddy-type-name">Golden Teddy</div>
+                    <div class="teddy-type-desc">क्योंकि तुम मेरी life की सबसे precious चीज़ हो।</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="content-section comparison-section">
+        <div class="comparison-container">
+            <div class="comparison-card">
+                <div class="comparison-title">🧸 टेडी vs दौलत 🧸</div>
+                <div class="comparison-grid">
+                    <div class="comparison-item">
+                        <div class="comparison-emoji">🧸</div>
+                        <div class="comparison-label">Teddy Bear</div>
+                    </div>
+                    <div class="comparison-vs">vs</div>
+                    <div class="comparison-item">
+                        <div class="comparison-emoji">👸</div>
+                        <div class="comparison-label">दौलत</div>
+                    </div>
+                </div>
+                <div class="comparison-result">
+                    Teddy soft होता है... 🧸<br>
+                    पर तुम्हारा दिल और भी soft है। 💖<br><br>
+                    Teddy गले लगाने से अच्छा लगता है,<br>
+                    पर तुम्हारा साथ दिल को सच में खुश करता है।
+                    <span class="winner">Winner हमेशा — मेरी Teddy दौलत ❤️👑</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promises Section - UPDATED -->
+    <section class="content-section promises-section">
+        <div class="promises-container">
+            <h2 class="section-title">💕 मेरे Teddy Promises 💕</h2>
+            <div class="promises-grid">
+                
+                <div class="promise-card">
+                    <div class="promise-icon">🤗</div>
+                    <div class="promise-text">मैं हमेशा तुम्हारी feelings की respect करूँगा।</div>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">🌙</div>
+                    <div class="promise-text">तुम्हें कभी अकेला महसूस नहीं होने दूँगा।</div>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">😊</div>
+                    <div class="promise-text">तुम्हारी खुशी मेरी first priority रहेगी।</div>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">💪</div>
+                    <div class="promise-text">हर मुश्किल में तुम्हारे साथ खड़ा रहूँगा।</div>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">🎁</div>
+                    <div class="promise-text">तुम्हें small things से खुश करता रहूँगा।</div>
+                </div>
+
+                <div class="promise-card">
+                    <div class="promise-icon">❤️</div>
+                    <div class="promise-text">और सबसे जरूरी — हमेशा सच्चा प्यार दूँगा।</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Shayari Section - UPDATED -->
+    <section class="content-section shayari-section">
+        <div class="shayari-container">
+            <h2 class="section-title">🧸 Teddy शायरी 🧸</h2>
+            <p class="shayari-hint">✨ कार्ड पर टैप करो शायरी पढ़ने के लिए ✨</p>
+            <div class="shayari-grid">
+                
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="teddy-icon">🧸</span>
+                                <div class="shayari-number">शायरी #1</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">टेडी तो बस खिलौना है,
+असल comfort तुम हो।
+<span class="highlight-name">दौलत</span>, इस दिल की
+सबसे प्यारी आदत तुम हो। 🧸</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="teddy-icon">🧸</span>
+                                <div class="shayari-number">शायरी #2</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">Soft सी तुम्हारी बातें,
+और sweet सी हँसी है।
+तुम साथ हो तो
+हर दिन Teddy Day जैसा ही है। 💕</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="teddy-icon">🧸</span>
+                                <div class="shayari-number">शायरी #3</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">ना gifts की चाह है,
+ना किसी surprise की जरूरत।
+तुम बस पास रहो,
+यही मेरी सबसे बड़ी <span class="highlight-name">दौलत</span>। ✨</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="teddy-icon">🧸</span>
+                                <div class="shayari-number">शायरी #4</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">दूरी से फर्क नहीं पड़ता,
+दिल हमेशा पास रहता है।
+तुम मेरी Teddy हो,
+और ये एहसास खास रहता है। 💖</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="teddy-icon">🧸</span>
+                                <div class="shayari-number">शायरी #5</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">रात की तन्हाई में,
+तुम्हारा ख्याल सुला देता है।
+<span class="highlight-name">दौलत</span>, तुम्हारा प्यार
+हर डर भुला देता है। 🌙</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shayari-card-wrapper">
+                    <div class="shayari-card" onclick="this.classList.toggle('flipped')">
+                        <div class="shayari-front">
+                            <div class="shayari-front-content">
+                                <span class="teddy-icon">🧸</span>
+                                <div class="shayari-number">शायरी #6</div>
+                                <div class="tap-hint">टैप करो दौलत 💕</div>
+                            </div>
+                        </div>
+                        <div class="shayari-back">
+                            <div class="shayari-text">टेडी soft होता है,
+पर तुम सबसे soft हो।
+मेरी हर खुशी का
+सबसे प्यारा reason तुम हो। 🧸</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Teddy Collection Section -->
+    <section class="teddy-collection-section">
+        <div class="collection-container">
+            <h2 class="section-title">🧸 Special Teddy Collection 🧸</h2>
+            <div class="teddy-box">
+                <div class="teddy-display">
+                    <div class="teddy-inner">
+                        <div class="teddy-emoji-large">🧸</div>
+                        <div class="teddy-label">My Teddy</div>
+                    </div>
+                </div>
+                
+                <div class="teddy-meanings">
+                    <div class="meaning-item">🧸 Brown Teddy — गहरा और सच्चा प्यार।</div>
+                    <div class="meaning-item">🐻‍❄️ White Teddy — पवित्र और innocent रिश्ता।</div>
+                    <div class="meaning-item">🩷 Pink Teddy — प्यार, care और affection।</div>
+                    <div class="meaning-item">🖤 Black Teddy — हमेशा साथ रहने का वादा।</div>
+                    <div class="meaning-item">❤️ Red Teddy — दिल से प्यार करता हूँ।</div>
+                </div>
+
+                <div class="teddy-stats">
+                    <div class="stat-item">
+                        <div class="stat-icon">🧸</div>
+                        <div class="stat-value">∞</div>
+                        <div class="stat-label">Softness</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">💕</div>
+                        <div class="stat-value">100%</div>
+                        <div class="stat-label">Cuddles</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-icon">💖</div>
+                        <div class="stat-value">Forever</div>
+                        <div class="stat-label">Together</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cuddle Counter Section -->
+    <section class="cuddle-counter-section">
+        <div class="cuddle-container">
+            <div class="cuddle-box">
+                <div class="cuddle-title">🤗 Cuddle Counter for दौलत 🤗</div>
+                <div class="cuddle-stats">
+                    
+                    <div class="cuddle-stat">
+                        <div class="cuddle-stat-icon">🧸</div>
+                        <div class="cuddle-stat-value">∞</div>
+                        <div class="cuddle-stat-label">Virtual Hugs</div>
+                    </div>
+
+                    <div class="cuddle-stat">
+                        <div class="cuddle-stat-icon">💕</div>
+                        <div class="cuddle-stat-value">24/7</div>
+                        <div class="cuddle-stat-label">Thinking of You</div>
+                    </div>
+
+                    <div class="cuddle-stat">
+                        <div class="cuddle-stat-icon">💖</div>
+                        <div class="cuddle-stat-value">100%</div>
+                        <div class="cuddle-stat-label">Love Level</div>
+                    </div>
+
+                    <div class="cuddle-stat">
+                        <div class="cuddle-stat-icon">✨</div>
+                        <div class="cuddle-stat-value">Forever</div>
+                        <div class="cuddle-stat-label">With You</div>
+                    </div>
+
+                </div>
+                <div class="cuddle-message">तुम मेरी सबसे प्यारी Teddy हो — हमेशा के लिए! 🧸💕</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sweet Lines Section - UPDATED -->
+    <section class="content-section sweetlines-section">
+        <div class="sweetlines-container">
+            <h2 class="section-title">💕 Teddy जैसी मीठी बातें 💕</h2>
+            <div class="tear-pages">
+                
+                <div class="tear-page">
+                    <div class="tear-page-text">🧸 तुम मेरी peace हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">💕 तुम्हारे बिना दिन अधूरा लगता है।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">✨ तुम्हारी हँसी मेरी favourite sound है।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">💖 तुम सिर्फ girlfriend नहीं, मेरी comfort हो।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">🤗 तुम हो तो सब सही लगता है।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">🌟 तुम्हारी care सबसे warm feeling देती है।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">🧸 तुम मेरी habit भी हो और happiness भी।</div>
+                </div>
+
+                <div class="tear-page">
+                    <div class="tear-page-text">❤️ सच में — तुम मेरी सबसे बड़ी <span class="name-highlight">दौलत</span> हो।</div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Teddy Gift Section -->
+    <section class="teddy-gift-section">
+        <div class="gift-container">
+            <div class="gift-title">🧸 A Teddy Gift For You 🧸</div>
+            <div class="gift-teddy-container">
+                <div class="gift-teddy">🧸</div>
+            </div>
+            <div class="gift-name">दौलत ❤️</div>
+            <div class="gift-subtitle">
+                ये Teddy तुम्हारे लिए है,
+                <br>
+                लेकिन सच कहूँ तो —
+                <br>
+                असली Teddy तो मैं हूँ... सिर्फ तुम्हारे लिए।
+                <br><br>
+                जब भी गले लगाने का मन करे — याद करना! 💕🧸
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Message Section - UPDATED -->
+    <section class="special-message-section">
+        <div class="special-message-container">
+            <div class="special-message-box">
+                <h2 class="special-message-title">🧸 दौलत के लिए खास मैसेज 🧸</h2>
+                <p class="special-message-text">
+                    मेरी प्यारी <span class="name-highlight">दौलत</span> ❤️
+                    <br><br>
+                    Teddy Day सिर्फ एक दिन नहीं है,
+                    ये एक reminder है
+                    कि तुम मेरे लिए कितनी important हो।
+                    <br><br>
+                    तुम मेरी comfort हो,
+                    मेरी smile की वजह हो,
+                    मेरी peace हो,
+                    और मेरी favourite feeling भी।
+                    <br><br>
+                    तुम्हारे साथ future imagine करना
+                    मुझे safe, happy और complete feel कराता है।
+                    <br><br>
+                    बस ऐसे ही साथ रहना…
+                    क्योंकि तुम्हारे बिना
+                    मेरी story अधूरी है।
+                    <br><br>
+                    <strong>Happy Teddy Day, मेरी सबसे प्यारी Teddy 🧸❤️</strong>
+                </p>
+                <div class="special-message-emoji">🧸💕🧸</div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Hide loader after page loads
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loader').classList.add('hidden');
+            }, 2000);
+            
+            createFlyingElements();
+        });
+
+        // Menu toggle
+        function toggleMenu() {
+            document.getElementById('menuItems').classList.toggle('active');
+        }
+
+        document.addEventListener('click', (e) => {
+            const menu = document.querySelector('.floating-menu');
+            if (!menu.contains(e.target)) {
+                document.getElementById('menuItems').classList.remove('active');
+            }
+        });
+
+        // Fullscreen toggle
+        function toggleFullscreen() {
+            const btn = document.getElementById('fullscreenBtn');
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().then(() => {
+                    btn.textContent = '✕';
+                }).catch(err => {
+                    console.log('Fullscreen error:', err);
+                });
+            } else {
+                document.exitFullscreen().then(() => {
+                    btn.textContent = '⛶';
+                });
+            }
+        }
+
+        document.addEventListener('fullscreenchange', () => {
+            const btn = document.getElementById('fullscreenBtn');
+            btn.textContent = document.fullscreenElement ? '✕' : '⛶';
+        });
+
+        // Flying teddies and hearts
+        function createFlyingElements() {
+            const container = document.getElementById('flyingElements');
+            const items = ['🧸', '💕', '💖', '✨', '💗', '🤗', '💓', '🩷'];
+            const isMobile = window.innerWidth < 768;
+            const interval = isMobile ? 2500 : 1500;
+            
+            setInterval(() => {
+                const element = document.createElement('div');
+                element.className = 'flying-teddy';
+                element.textContent = items[Math.floor(Math.random() * items.length)];
+                element.style.left = Math.random() * 100 + '%';
+                element.style.fontSize = (Math.random() * 1.5 + 1) + 'rem';
+                
+                const duration = Math.random() * 10 + 15;
+                element.style.animationDuration = duration + 's';
+                element.style.opacity = Math.random() * 0.2 + 0.15;
+                
+                container.appendChild(element);
+                
+                setTimeout(() => element.remove(), duration * 1000 + 1000);
+            }, interval);
+        }
+    </script>
+</body>
+</html>
